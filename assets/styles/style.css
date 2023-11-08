@@ -143,7 +143,7 @@ body {
 }
 
 .header__menu {
-  height: 66px;
+  height: 4.125rem;
 }
 
 .header__menu__items {
@@ -180,4 +180,45 @@ body {
 
 .humburger__menu__button > span:not(:last-child) {
   margin-bottom: 6px;
+}
+
+.hero {
+  position: relative;
+  height: 35.75rem;
+}
+.hero__ribbon {
+  position: absolute;
+  background-color: #119199;
+  border-bottom-right-radius: 50px;
+  top: -4.125rem;
+  height: 2.5rem;
+  width: 3.125rem;
+}
+@media (min-width: 36em) {
+  .hero__ribbon {
+    top: -4.125rem;
+    height: 5.5rem;
+    width: 4.375rem;
+  }
+}
+@media (min-width: 48em) {
+  .hero__ribbon {
+    top: -4.125rem;
+    height: 16.25rem;
+    width: 4.375rem;
+  }
+}
+@media (min-width: 64em) {
+  .hero__ribbon {
+    top: -4.125rem;
+    height: 33.5rem;
+    width: 5.375rem;
+  }
+}
+@media (min-width: 80em) {
+  .hero__ribbon {
+    top: -4.125rem;
+    height: 33.5rem;
+    width: 6.275rem;
+  }
 }/*# sourceMappingURL=style.css.map */

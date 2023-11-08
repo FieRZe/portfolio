@@ -1,0 +1,46 @@
+.hero {
+    position: relative;
+    height: 35.75rem; // 572px
+
+    //background-color: rgba($color: white, $alpha: 0.1);
+
+
+    &__ribbon {
+        position: absolute;
+        background-color: $turquoise;
+        border-bottom-right-radius: 50px;
+
+        
+        top: -4.125rem;   //-66px
+        height: 2.5rem;   // 50px
+        width: 3.125rem;  // 40px
+
+
+
+        @include breakpoint-up(md){
+            top: -4.125rem;     //-66px
+            height: 5.5rem;   // 88px
+            width: 4.375rem;    // 70px
+        }
+
+        @include breakpoint-up(lg){
+            top: -4.125rem;     //-66px
+            height: 16.25rem;   // 260px
+            width: 4.375rem;    // 70px
+        }
+
+
+        @include breakpoint-up(xl){
+            top: -4.125rem;     //-66px
+            height: 33.5rem;    // 536px
+            width: 5.375rem;    // 86px
+        }
+
+
+        @include breakpoint-up(xxl){
+            top: -4.125rem;     //-66px
+            height: 33.5rem;    // 536px
+            width: 6.275rem;    // 102px
+        }
+    }
+}
