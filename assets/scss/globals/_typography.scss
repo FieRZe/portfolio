@@ -1,7 +1,14 @@
+@use "../variables" as variables;
+
+/* Text color */
+body {
+    color: variables.$white;
+}
 
 
 /* Links */
 a, a:link, a:visited  {
+    color: variables.$white;
     text-decoration: none;
 }
 

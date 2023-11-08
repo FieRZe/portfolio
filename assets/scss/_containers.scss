@@ -1,0 +1,63 @@
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-wrapper {
+    flex-grow: 1;
+    height: 100dvh; // удалить, после вёрстки
+    background-color: $purple-dark;
+
+    @include breakpoint-up(xxl){
+        max-width: 80rem; // 1280px
+    }
+
+}
+
+.container {
+    //background-color: antiquewhite;
+    
+    &--pall {
+        padding-top: 1.5rem; // 24px; 
+        padding-right: 1.5rem; // 24px; 
+        padding-bottom: 1.5rem; // 24px; 
+        padding-left: 1.5rem; // 24px; 
+    }
+
+    &--px {
+        padding-right: 1.5rem; // 24px; 
+        padding-left: 1.5rem; // 24px; 
+    }
+
+    &--py {
+        padding-top: 1.5rem; // 24px; 
+        padding-bottom: 1.5rem; // 24px; 
+
+    }
+
+    
+}
+
+
+// hide desktop menu
+.hide-for-mobile {
+    
+    @include breakpoint-down(md){
+        display: none;
+    }
+    
+}
+
+// hide humburger menu
+.hide-for-desktop {
+    height: 100%;
+    display: block;
+
+    @include breakpoint-up(lg){
+        display: none;
+    }
+
+
+}
+

@@ -1,0 +1,30 @@
+// @use "../mixins" as mixin;
+
+
+.header {
+
+    &__menu {
+        height: 66px;
+        // display: flex;
+        // justify-content: center; // align center desktop nav
+
+        &__items {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__item {
+                
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        &__link {
+            display: block;
+        }
+        
+
+        
+    }
+}
+

@@ -1,0 +1,15 @@
+@import "variables";
+
+
+
+@mixin breakpoint-up($size) {
+    @media (min-width: map-get($grid-breakpoints-up, $size)) { // $map, $key
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($grid-breakpoints-down, $size)){
+        @content;
+    }
+}

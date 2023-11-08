@@ -1,0 +1,25 @@
+// Colors
+$white: #ffffff;            // text-dark-theme
+$grey: #9E9E9E;             // copyrght-dark-theme
+$turquoise-light: #71CBCD;
+$turquoise: #119199;
+$blue-deep: #1B5C81;
+$blue-dark: #20456F;
+$purple-dark: #342C3C;      // background-dark-theme
+
+// Screen Size Breakpoints
+$grid-breakpoints-up: (
+    //"sm": 0, 
+    "md": 36em,     // 576px landscape phones
+    "lg": 48em,     // 768px tablets and larger
+    "xl": 64em,     // 1024px desktop and larger
+    "xxl": 80em,    // 1280px
+);
+
+$grid-breakpoints-down: (
+    //"xs": 0, 
+    "sm": 35.99875em,     // 575.98px portrait phones and smaller
+    "md": 47.99875em,     // 767.98px landscape phones and smaller
+    "lg": 63.99875em,     // 1023.98px tablets and smaller
+    "xl": 79.99875em,    // 1279.98px desktop and smaller
+);

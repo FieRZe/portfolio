@@ -1,0 +1,25 @@
+@use "../variables" as variables;
+
+.humburger__menu {
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    &__button {
+
+        cursor: pointer;
+
+        width: 1.5rem; // 24px;
+            
+            & > span {
+                display: block;
+                height: 2px;
+                background-color: variables.$white;
+
+                &:not(:last-child) {
+                    margin-bottom: 6px;
+                } 
+            }
+    }
+}

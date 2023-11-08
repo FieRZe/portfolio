@@ -80,11 +80,104 @@ legend {
   display: block;
 }
 
+/* Text color */
+body {
+  color: #ffffff;
+}
+
 /* Links */
 a, a:link, a:visited {
+  color: #ffffff;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.main-wrapper {
+  flex-grow: 1;
+  height: 100dvh;
+  background-color: #342C3C;
+}
+@media (min-width: 80em) {
+  .main-wrapper {
+    max-width: 80rem;
+  }
+}
+
+.container--pall {
+  padding-top: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+.container--px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.container--py {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 47.99875em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  height: 100%;
+  display: block;
+}
+@media (min-width: 48em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.header__menu {
+  height: 66px;
+}
+
+.header__menu__items {
+  display: flex;
+  justify-content: center;
+}
+
+.header__menu__item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.header__menu__link {
+  display: block;
+}
+
+.humburger__menu {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.humburger__menu__button {
+  cursor: pointer;
+  width: 1.5rem;
+}
+
+.humburger__menu__button > span {
+  display: block;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.humburger__menu__button > span:not(:last-child) {
+  margin-bottom: 6px;
 }/*# sourceMappingURL=style.css.map */
