@@ -43,7 +43,7 @@ body {
 // hide desktop menu
 .hide-for-mobile {
     
-    @include breakpoint-down(md){
+    @include breakpoint-down("lg"){
         display: none;
     }
     
@@ -54,7 +54,7 @@ body {
     height: 100%;
     display: block;
 
-    @include breakpoint-up(lg){
+    @include breakpoint-up("xl"){
         display: none;
     }
 

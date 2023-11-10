@@ -147,7 +147,7 @@ body {
   padding-bottom: 1.5rem;
 }
 
-@media (max-width: 47.99875em) {
+@media (max-width: 63.99875em) {
   .hide-for-mobile {
     display: none;
   }
@@ -157,7 +157,7 @@ body {
   height: 100%;
   display: block;
 }
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .hide-for-desktop {
     display: none;
   }
