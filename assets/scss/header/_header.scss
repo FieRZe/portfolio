@@ -1,10 +1,10 @@
-// @use "../mixins" as mixin;
+@use "../mixins" as mixin;
 
 
 .header {
 
     &__menu {
-        height: 66px;
+        height: 4.125rem; // 66px
         // display: flex;
         // justify-content: center; // align center desktop nav
 
@@ -23,7 +23,10 @@
             display: block;
         }
         
-
+        @include mixin.breakpoint-down("lg") {
+            
+            position: absolute;
+        }
         
     }
 }
