@@ -1,6 +1,9 @@
+@use "../variables" as variables;
+@use "../mixins" as mixins;
+
 html {
     box-sizing: border-box; 
-    font-size: 16px;
+    font-size: 1rem; // 16px
 }
 
 /* Reset and base styles  */
@@ -65,6 +68,36 @@ button, input[type="submit"] {
     background: none;
     cursor: pointer;
 }
+
+.cta {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: variables.$turquoise;
+	width: 11.25rem; // 180px
+	height: 2.75rem; 	// 44px
+	border-radius: 1.125rem; // 18px
+
+	margin-bottom: 0.75rem; // 12px
+
+	font-size: 1rem; // 16px
+	
+	
+	// @include mixins.breakpoint-up("lg") {		// 768+ px
+	// 	border-radius: 1.125rem; // 18px
+	// 	width: 180px;
+	// 	height: 44px;
+	// }
+	@include mixins.breakpoint-up("xl") {		// 1024+ px
+		margin: 0 1.5rem; // 24px
+
+		border-radius: 1.125rem; // 18px
+		width: 14.75rem; // 236px
+		height: 3.625rem; // 58px
+	}
+}
+
 
 input:focus, input:active,
 button:focus, button:active {

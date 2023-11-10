@@ -1,4 +1,4 @@
-// @use "../mixins" as mixin;
+@use "../mixins" as mixin;
 
 
 .header {
@@ -23,7 +23,10 @@
             display: block;
         }
         
-
+        @include mixin.breakpoint-down("lg") {
+            
+            position: absolute;
+        }
         
     }
 }

@@ -10,10 +10,10 @@ $purple-dark: #342C3C;      // background-dark-theme
 // Screen Size Breakpoints
 $grid-breakpoints-up: (
     //"sm": 0, 
-    "md": 36em,     // 576px landscape phones
-    "lg": 48em,     // 768px tablets and larger
-    "xl": 64em,     // 1024px desktop and larger
-    "xxl": 80em,    // 1280px
+    "md": 36em,     // +576px  landscape phones
+    "lg": 48em,     // +768px  tablets and larger
+    "xl": 64em,     // +1024px desktop and larger
+    "xxl": 80em,    // +1280px
 );
 
 $grid-breakpoints-down: (
