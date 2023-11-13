@@ -2,32 +2,35 @@
 
 
 .header {
+    position: relative;
+}
 
-    &__menu {
-        height: 4.125rem; // 66px
-        // display: flex;
-        // justify-content: center; // align center desktop nav
+.header-menu {
+    grid-column-start: main;
 
-        &__items {
-            display: flex;
-            justify-content: center;
-        }
+    height: 4.125rem; // 66px
+    // display: flex;
+    // justify-content: center; // align center desktop nav
 
-        &__item {
-                
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
-        &__link {
-            display: block;
-        }
-        
-        @include mixin.breakpoint-down("lg") {
-            
-            position: absolute;
-        }
-        
+    &__items {
+        display: flex;
+        justify-content: center;
     }
+
+    &__item {
+            
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    &__link {
+        display: block;
+    }
+    
+    @include mixin.breakpoint-down("lg") {
+        
+        position: absolute;
+    }
+    
 }
 

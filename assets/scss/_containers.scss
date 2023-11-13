@@ -36,7 +36,50 @@ body {
 
     }
 
+    &--pt {
+        padding-top: 1.5rem; // 24px; 
+    }
+    &--pr {
+        padding-right: 1.5rem; // 24px; 
+    }
+    &--pb {
+        padding-bottom: 1.5rem; // 24px; 
+    }
+    &--pl {
+        padding-left: 1.5rem; // 24px; 
+    }
+
     
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: [left] 0 [main] 5fr [right] 0 [end];
+    grid-template-rows: [navigation] min-content [photo] min-content [separate-margin] 2rem [hero] min-content [separate-margin] 5.875rem [end];
+
+    @include breakpoint-up("xl") {
+        grid-template-columns: [left] 3fr [main] 5fr [right] 1fr [end];
+    }
+
+    &--left-column {
+        grid-column-start: left;
+    }
+    &--main-column {
+        grid-column-start: main;
+    }
+    &--right-column {
+        grid-column-start: right;
+    }
+
+    &--navigation-row {
+        grid-row-start: navigation;
+    }
+    &--hero-row {
+        grid-row-start: hero;
+    }
+    &--photo-row {
+        grid-row-start: photo;
+    }
 }
 
 

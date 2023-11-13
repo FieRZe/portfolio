@@ -11,75 +11,70 @@
 <body>
 <div class="main-wrapper">
 
-  <header class="header">
 
-    <div class="container container--px">
-        <nav class="header__menu">
-            <div class="hide-for-mobile">
-                <ul class="header__menu__items">
-                    <li class="header__menu__item">
-                        <a class="header__menu__link container--py" href="#">Главная</a>
-                    </li>
-                    <li class="header__menu__item">
-                        <a class="header__menu__link container--py" href="#">Проекты</a>
-                    </li>
-                    <li class="header__menu__item">
-                        <a class="header__menu__link container--py" href="#">Биография</a>
-                    </li>
-                    <li class="header__menu__item">
-                        <a class="header__menu__link container--py" href="#">Резюме</a>
-                    </li>
-                    <li class="header__menu__item">
-                        <a class="header__menu__link container--py" href="#">Контакты</a>
-                    </li>
-                </ul>
+  <header class="header grid">
+
+    <!-- <div class="container container--px"> -->
+    <nav class="navigaion__links-menu hide-for-mobile grid--main-column grid--navigation-row">
+        <ul class="header-menu__items">
+            <li class="header-menu__item">
+                <a class="header-menu__link container--py" href="#">Главная</a>
+            </li>
+            <li class="header-menu__item">
+                <a class="header-menu__link container--py" href="#">Проекты</a>
+            </li>
+            <li class="header-menu__item">
+                <a class="header-menu__link container--py" href="#">Биография</a>
+            </li>
+            <li class="header-menu__item">
+                <a class="header-menu__link container--py" href="#">Резюме</a>
+            </li>
+            <li class="header-menu__item">
+                <a class="header-menu__link container--py" href="#">Контакты</a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="navigation__humburger-menu hide-for-desktop grid--right-column grid--navigation-row container--pt container--pr">
+        <div class="navigation__humburger-menu__button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <!-- </div> -->
+
+
+    <!-- <section class="hero "> -->
+        <!-- <div class="hero__content"> -->
+            <div class="hero__ribbon--wrapper grid--left-column grid--navigation-row">
+                <div class="hero__ribbon--color"></div>
+                <!-- <div class="hero__ribbon--right-column"></div> -->
             </div>
-            <div class="hide-for-desktop">
-                <div class="humburger__menu">
-                    <div class="humburger__menu__button">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+
+            
+            <div class="hero__content--photo-column grid--main-column grid--photo-row">
+                <img class="hero__photo " src="./assets/img/photo.png" alt="Фото соискателя. Илья.">
+
+            </div>
+
+            <div class="hero__content--main-column grid--main-column grid--hero-row">
+                <div class="hero__name">
+                    <p>Илья V.</p>
+                </div>
+
+                <div class="hero__position">
+                    <h1>Front-End Разработчик</h1>
+                </div>
+                <div class="hero__cta">
+                    <a class="hero__contact cta" href="#">Связаться</a>
+                    <a class="hero__cv cta" href="#">Резюме</a>
                 </div>
             </div>
-        </nav>
-    </div>
+        <!-- </div> -->
+    <!-- </section> -->
 
-  </header>  
+  </header>
 
-  <section class="hero">
-    
-
-
-    <div class="hero__content">
-        <div class="hero__ribbon--wrapper">
-            <div class="hero__ribbon--color"></div>
-            <!-- <div class="hero__ribbon--right-column"></div> -->
-        </div>
-
-
-        <div class="hero__content--photo-column">
-            <img class="hero__photo" src="./assets/img/photo.png" alt="Фото соискателя. Илья.">
-            
-        </div>
-        <div class="hero__content--main-column">
-            <div class="hero__name">    
-                <p>Илья V.</p>
-            </div>
-
-            <div class="hero__position">
-                <h1>Front-End Разработчик</h1>
-            </div>
-            <div class="hero__cta">
-                <a class="hero__contact cta" href="#">Связаться</a>
-                <a class="hero__cv cta" href="#">Резюме</a>
-            </div>
-        </div>
-        <div class="hero__content--right-column hide-for-mobile"></div>
-    </div>
-
-  </section>
 
 
 </div>
