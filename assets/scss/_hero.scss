@@ -42,8 +42,16 @@
         }
         
         &--photo-column {
-            padding-left:10%;
             z-index: 2;
+
+            display: flex;
+            justify-content: center;
+
+            @include breakpoint-up("xl") {
+                grid-column-start: left;
+                grid-row-start: hero;
+                padding-left:10%;
+            }
         }
 
         &--main-column {
@@ -54,12 +62,10 @@
             justify-content: center;
             align-items: center;
             
-            max-width: 600px;
+            // max-width: 600px;
 
-            margin-left: 0;
-
-            @include breakpoint-up("xl"){
-                margin-left: 3%;
+            @include breakpoint-up("xl") {
+                padding: 0 30px;
             }
         }
         
@@ -69,7 +75,7 @@
 
     &__ribbon--wrapper{
         grid-column-start: left;
-        grid-row-start: hero;
+        grid-row-start: navigation;
 
         position: absolute;
         //display: flex;
@@ -92,17 +98,17 @@
         }
 
         @include breakpoint-up("lg"){
-            top: -4.125rem;   //-66px
-            height: 261px;
+            //top: -6.125rem;   //-66px
+            height: 294px;
         }
         
         @include breakpoint-up("xl"){
-            height: 128%;
+            height: 106%;
             width: 8%;  // 86px
 
         }
         @include breakpoint-up("xxl"){
-            height: 128%;
+            height: 106%;
             //width: 6.275rem;    // 102px
 
         }
@@ -116,8 +122,8 @@
         border-bottom-right-radius: 50px;
 
         
-        width: 99%;
-        height: 100%;
+        //width: 99%;
+        height: 94%;
 
 
 
@@ -137,17 +143,19 @@
 
         
         min-width: 186px;
-        max-width: 430px;
+        max-width: 240px;
+        
+        width: 100%;
 
-        margin-bottom: 48px;
+        //margin-bottom: 48px;
 
         @include breakpoint-up("xl") {
             justify-content: end;
             margin-bottom: 0;
+            max-width: 384px;
         }
 
 
-        width: 100%;
 
         // @include breakpoint-up("xl") {
         //     //position: absolute;

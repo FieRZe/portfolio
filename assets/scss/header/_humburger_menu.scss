@@ -1,10 +1,9 @@
 @use "../variables" as variables;
 
-.humburger__menu {
-    height: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
+.navigation__humburger-menu {
+    
+    
+    justify-self: end;
 
     &__button {
 
