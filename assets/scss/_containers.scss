@@ -39,6 +39,30 @@ body {
     
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: [left] 3fr [main] 5fr [right] 1fr [end];
+    grid-template-rows: [navigation] min-content [hero] min-content [end];
+
+
+    &--left-column {
+        grid-column-start: left;
+    }
+    &--main-column {
+        grid-column-start: main;
+    }
+    &--right-column {
+        grid-column-start: right;
+    }
+
+    &--navigation-row {
+        grid-row-start: navigation;
+    }
+    &--hero-row {
+        grid-row-start: hero;
+    }
+}
+
 
 // hide desktop menu
 .hide-for-mobile {

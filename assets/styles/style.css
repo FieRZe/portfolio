@@ -147,6 +147,27 @@ body {
   padding-bottom: 1.5rem;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: [left] 3fr [main] 5fr [right] 1fr [end];
+  grid-template-rows: [navigation] min-content [hero] min-content [end];
+}
+.grid--left-column {
+  grid-column-start: left;
+}
+.grid--main-column {
+  grid-column-start: main;
+}
+.grid--right-column {
+  grid-column-start: right;
+}
+.grid--navigation-row {
+  grid-row-start: navigation;
+}
+.grid--hero-row {
+  grid-row-start: hero;
+}
+
 @media (max-width: 63.99875em) {
   .hide-for-mobile {
     display: none;
@@ -163,26 +184,31 @@ body {
   }
 }
 
-.header__menu {
+.header {
+  position: relative;
+}
+
+.header-menu {
+  grid-column-start: main;
   height: 4.125rem;
 }
 
-.header__menu__items {
+.header-menu__items {
   display: flex;
   justify-content: center;
 }
 
-.header__menu__item {
+.header-menu__item {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-.header__menu__link {
+.header-menu__link {
   display: block;
 }
 
 @media (max-width: 63.99875em) {
-  .header__menu {
+  .header-menu {
     position: absolute;
   }
 }
@@ -208,17 +234,9 @@ body {
   margin-bottom: 6px;
 }
 
-.hero {
-  position: relative;
-  height: 35.75rem;
-}
 .hero__content {
   position: relative;
   padding-top: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 @media (min-width: 64em) {
   .hero__content {
@@ -228,19 +246,8 @@ body {
   }
 }
 .hero__content--photo-column {
+  padding-left: 10%;
   z-index: 2;
-  flex: 3;
-  display: flex;
-  justify-content: center;
-  min-width: 186px;
-  max-width: 430px;
-  margin-bottom: 48px;
-}
-@media (min-width: 64em) {
-  .hero__content--photo-column {
-    justify-content: end;
-    margin-bottom: 0;
-  }
 }
 .hero__content--main-column {
   flex: 3;
@@ -256,15 +263,10 @@ body {
     margin-left: 3%;
   }
 }
-.hero__content--right-column {
-  flex: 2;
-  height: 20px;
-  max-width: 70px;
-}
 .hero__ribbon--wrapper {
+  grid-column-start: left;
+  grid-row-start: hero;
   position: absolute;
-  display: flex;
-  align-self: start;
   z-index: 1;
   top: 0rem;
   width: 3.125rem;
@@ -294,22 +296,21 @@ body {
   }
 }
 .hero__ribbon--color {
-  flex: 2;
   background-color: #119199;
   border-bottom-right-radius: 50px;
   width: 99%;
   height: 100%;
 }
-.hero__ribbon--right-column {
-  flex: 2;
-  min-width: 1094px;
-}
 .hero__photo {
+  min-width: 186px;
+  max-width: 430px;
+  margin-bottom: 48px;
   width: 100%;
 }
 @media (min-width: 64em) {
   .hero__photo {
-    margin-left: 10%;
+    justify-content: end;
+    margin-bottom: 0;
   }
 }
 .hero__name > p {

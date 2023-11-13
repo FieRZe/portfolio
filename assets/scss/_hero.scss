@@ -1,12 +1,17 @@
 .hero {
-    position: relative;
-    height: 35.75rem; // 572px
+    // grid-row-start: hero;
+
+    // position: relative;
+    // height: 35.75rem; // 572px
     
 
     //background-color: rgba($color: white, $alpha: 0.1);
 
 
     &__content {
+        
+
+
         position: relative;
         
         // margin-left: 25.75em ; // 124px
@@ -16,10 +21,14 @@
         //padding-top: 6.75rem; // 140px
         
         //max-width: 570px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        
+        
+        // display: flex;
+
+
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
        
 
         @include breakpoint-up("xl") {
@@ -33,22 +42,8 @@
         }
         
         &--photo-column {
+            padding-left:10%;
             z-index: 2;
-
-            flex: 3;
-            display: flex;
-            justify-content: center;
-            
-            min-width: 186px;
-            max-width: 430px;
-
-            margin-bottom: 48px;
-
-            @include breakpoint-up("xl") {
-                justify-content: end;
-                margin-bottom: 0;
-            }
-
         }
 
         &--main-column {
@@ -67,24 +62,18 @@
                 margin-left: 3%;
             }
         }
-
-        &--right-column {
-            flex: 2;
-            height: 20px; // для видимости вёрстки, удалить
-            //min-width: 390px;
-            
-            max-width: 70px;
-            // max-width: 234px;
-
-        }
+        
     }
 
     // RIBBON
 
     &__ribbon--wrapper{
+        grid-column-start: left;
+        grid-row-start: hero;
+
         position: absolute;
-        display: flex;
-        align-self: start;
+        //display: flex;
+        //align-self: start;
         z-index: 1;
 
         //height: 2.5rem;   // 50px
@@ -122,7 +111,7 @@
     }
 
     &__ribbon--color {
-        flex: 2;
+        //flex: 2;
         background-color: $turquoise;
         border-bottom-right-radius: 50px;
 
@@ -141,21 +130,29 @@
         // }
     }
 
-    &__ribbon--right-column {
-        flex: 2;
-        min-width: 1094px; // 1024 +70 102(размер ribbon)
-    }
-
-
 
     // PHOTO
     &__photo {
-        width: 100%;
+        
+
+        
+        min-width: 186px;
+        max-width: 430px;
+
+        margin-bottom: 48px;
 
         @include breakpoint-up("xl") {
-            //position: absolute;
-            margin-left: 10%; //40px
+            justify-content: end;
+            margin-bottom: 0;
         }
+
+
+        width: 100%;
+
+        // @include breakpoint-up("xl") {
+        //     //position: absolute;
+        //     margin-left: 10%; //40px
+        // }
     }
 
     &__name > p {
