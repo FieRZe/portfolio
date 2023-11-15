@@ -106,6 +106,20 @@ body {
   font-family: Arial, sans-serif;
 }
 
+h2 {
+  font-size: 22px;
+}
+
+@media (min-width: 36em) {
+  h2 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 48em) {
+  h2 {
+    font-size: 48px;
+  }
+}
 /* Links */
 a, a:link, a:visited {
   color: #ffffff;
@@ -123,7 +137,7 @@ body {
 
 .main-wrapper {
   flex-grow: 1;
-  height: 100dvh;
+  height: 300vh;
   background-color: #342C3C;
   overflow: hidden;
 }
@@ -163,7 +177,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: [left] 0 [main] 5fr [right] 0 [end];
-  grid-template-rows: [navigation] min-content [photo] min-content [separate-margin] 2rem [hero] min-content [separate-margin] 5.875rem [end];
+  grid-template-rows: [navigation] min-content [photo] min-content [separate-margin] 2rem [hero] min-content [end];
 }
 @media (min-width: 64em) {
   .grid {
@@ -205,10 +219,36 @@ body {
   }
 }
 
-.header {
-  position: relative;
+.bubble {
+  z-index: 0;
+  position: absolute;
+  border-radius: 100%;
+  background-color: rgba(17, 145, 153, 0.1);
+}
+.bubble--title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 55px;
+}
+@media (min-width: 36em) {
+  .bubble--title {
+    height: 105px;
+    width: 105px;
+  }
 }
 
+.header {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 64em) {
+  .header {
+    margin-bottom: 94px;
+  }
+}
 .header-menu {
   grid-column-start: main;
   height: 4.125rem;
@@ -377,18 +417,14 @@ body {
   background-color: #1B5C81;
 }
 .hero__bubble {
-  z-index: 0;
   grid-column-start: main;
   grid-row-start: hero;
-  position: absolute;
   top: -4%;
   right: 0;
   transform: translateX(50%);
   display: flex;
   min-width: 128px;
   min-height: 128px;
-  border-radius: 300px;
-  background-color: rgba(17, 145, 153, 0.1);
 }
 @media (min-width: 36em) {
   .hero__bubble {
@@ -403,4 +439,41 @@ body {
     min-height: 204px;
     top: 15%;
   }
+}
+
+.title {
+  height: 55px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 36em) {
+  .title {
+    height: 105px;
+  }
+}
+.title > .bubble--title {
+  position: relative;
+  margin: 0 10%;
+}
+.title__left, .title__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+  width: 100%;
+}
+.title__circle {
+  display: block;
+  content: "";
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background-color: #119199;
+}
+.title__line {
+  height: 2px;
+  width: 100%;
+  background-color: #1B5C81;
 }/*# sourceMappingURL=style.css.map */
