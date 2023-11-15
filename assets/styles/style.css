@@ -442,11 +442,12 @@ body {
 }
 
 .title {
-  height: 55px;
-  display: flex;
   position: relative;
+  display: flex;
+  height: 55px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 @media (min-width: 36em) {
   .title {
@@ -476,4 +477,49 @@ body {
   height: 2px;
   width: 100%;
   background-color: #1B5C81;
+}
+
+.progress {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+.progress-outer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #20456F;
+  box-shadow: 3px 3px 3px -1px rgba(0, 0, 0, 0.5), -1px -1px 2px -1px rgba(0, 0, 0, 0.7);
+}
+.progress-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #342C3C;
+  box-shadow: inset 3px 3px 3px -1px rgba(0, 0, 0, 0.6), inset -1px -1px 2px -1px rgba(0, 0, 0, 0.55);
+}
+.progress-percentage {
+  font-size: 8px;
+}
+.progress-stroke {
+  position: absolute;
+  fill: none;
+  stroke: #119199;
+  stroke-width: 7px;
+  stroke-dasharray: 128;
+  stroke-dashoffset: 127;
+  animation: anim 2s linear forwards 2s;
+}
+
+@keyframes anim {
+  100% {
+    stroke-dashoffset: 39;
+  }
 }/*# sourceMappingURL=style.css.map */

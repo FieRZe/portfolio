@@ -3,15 +3,15 @@
 }
 
 .title {
-    height: 55px;
-
-
-
-    display: flex;
     position: relative;
+    display: flex;
+
+    height: 55px;
 
     justify-content: center;
     align-items: center;
+
+    margin-bottom: 50px;
 
     @include breakpoint-up("md"){
         height: 105px;
@@ -48,5 +48,65 @@
         height: 2px;
         width: 100%;
         background-color: $blue-deep;
+    }
+}
+
+
+.progress {
+    position: relative;
+    height: 50px;
+    width: 50px;
+
+    &-outer {
+        position: absolute;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+
+        background-color: $blue-dark;
+
+        box-shadow: 3px 3px 3px -1px rgba(0,0,0, 0.50),
+                    -1px -1px 2px -1px rgba(0,0,0, 0.70);
+        // border: 1px solid white;
+    }
+
+    &-inner {display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        
+        background-color: $purple-dark;
+        
+        box-shadow: inset 3px 3px 3px -1px rgba(0,0,0, 0.60),
+                    inset -1px -1px 2px -1px rgba(0,0,0, 0.55);
+    }
+
+    &-percentage {
+        font-size: 8px;
+    }
+
+    &-stroke {
+        position: absolute;
+        fill: none;
+        stroke: $turquoise;
+        stroke-width: 7px;
+        stroke-dasharray: 128;
+        stroke-dashoffset: 127;
+        animation: anim 2s linear forwards 2s;
+    }
+}
+
+@keyframes anim {
+
+    100% {
+        stroke-dashoffset: 39;
     }
 }
