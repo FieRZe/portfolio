@@ -125,6 +125,7 @@ body {
   flex-grow: 1;
   height: 100dvh;
   background-color: #342C3C;
+  overflow: hidden;
 }
 @media (min-width: 80em) {
   .main-wrapper {
@@ -275,6 +276,7 @@ body {
   }
 }
 .hero__content--main-column {
+  z-index: 1;
   flex: 3;
   display: flex;
   flex-direction: column;
@@ -373,4 +375,32 @@ body {
 }
 .hero__cv {
   background-color: #1B5C81;
+}
+.hero__bubble {
+  z-index: 0;
+  grid-column-start: main;
+  grid-row-start: hero;
+  position: absolute;
+  top: -4%;
+  right: 0;
+  transform: translateX(50%);
+  display: flex;
+  min-width: 128px;
+  min-height: 128px;
+  border-radius: 300px;
+  background-color: rgba(17, 145, 153, 0.1);
+}
+@media (min-width: 36em) {
+  .hero__bubble {
+    min-width: 204px;
+    min-height: 204px;
+    top: -14%;
+  }
+}
+@media (min-width: 64em) {
+  .hero__bubble {
+    min-width: 204px;
+    min-height: 204px;
+    top: 15%;
+  }
 }/*# sourceMappingURL=style.css.map */
