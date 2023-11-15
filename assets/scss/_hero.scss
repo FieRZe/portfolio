@@ -2,6 +2,7 @@
     // grid-row-start: hero;
 
     // position: relative;
+
     // height: 35.75rem; // 572px
     
 
@@ -55,6 +56,7 @@
         }
 
         &--main-column {
+            z-index: 1;
             flex: 3;
 
             display: flex;
@@ -205,5 +207,43 @@
     &__cv {
         background-color: $blue-deep;
     }
+
+    &__bubble {
+        z-index: 0;
+        grid-column-start: main;
+        grid-row-start: hero ;
+
+        position: absolute;
+        top:-4%;
+        right: 0;
+        transform: translateX(50%);
+
+        display: flex;
+
+        min-width: 128px;
+        min-height: 128px;
+
+        border-radius: 300px;
+
+        background-color: rgba($color: $turquoise, $alpha: 0.1);
+
+        @include breakpoint-up("md") {
+            min-width: 204px;
+            min-height: 204px;
+            
+            top:-14%;
+        }
+
+        @include breakpoint-up("xl") {
+            min-width: 204px;
+            min-height: 204px;
+            
+            top:15%;
+        }
+
+        
+
+    }
+    
 
 }

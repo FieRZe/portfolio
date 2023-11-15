@@ -9,6 +9,8 @@ body {
     height: 100dvh; // удалить, после вёрстки
     background-color: $purple-dark;
 
+    overflow: hidden;
+
     @include breakpoint-up(xxl){
         max-width: 80rem; // 1280px
     }
