@@ -1,5 +1,5 @@
 .skills {
-   
+   margin-bottom: 50px;
 }
 
 .title {
@@ -58,14 +58,16 @@
     align-items: center;
 
     margin-bottom: 22px;
-
-    & > .skill-name {
-        font-size: 10px;
-
-        
-    }
-
 }
+
+.skill-name, .skill-note {
+    font-size: 10px;
+}
+
+.skill-note {
+    margin: 20px 0;
+}
+
 .progress {
     position: relative;
 
@@ -119,3 +121,4 @@
         stroke-dashoffset: 127;
     }
 }
+

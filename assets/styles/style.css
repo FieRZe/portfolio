@@ -100,7 +100,7 @@ legend {
   display: block;
 }
 
-/* Text color */
+/* Text */
 body {
   color: #ffffff;
   font-family: Arial, sans-serif;
@@ -120,6 +120,10 @@ h2 {
     font-size: 48px;
   }
 }
+p {
+  font-weight: 300;
+}
+
 /* Links */
 a, a:link, a:visited {
   color: #ffffff;
@@ -383,7 +387,6 @@ body {
   }
 }
 .hero__name > p {
-  font-weight: 300;
   font-size: 1.125rem;
 }
 @media (min-width: 36em) {
@@ -447,6 +450,10 @@ body {
   }
 }
 
+.skills {
+  margin-bottom: 50px;
+}
+
 .title {
   position: relative;
   display: flex;
@@ -491,8 +498,13 @@ body {
   align-items: center;
   margin-bottom: 22px;
 }
-.skill-flex-container > .skill-name {
+
+.skill-name, .skill-note {
   font-size: 10px;
+}
+
+.skill-note {
+  margin: 20px 0;
 }
 
 .progress {

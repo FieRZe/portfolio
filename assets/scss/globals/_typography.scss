@@ -1,7 +1,9 @@
 @use "../variables" as variables;
 @use "../mixins" as mixin;
 
-/* Text color */
+
+
+/* Text */
 body {
     color: variables.$white;
     font-family:  Arial, sans-serif;
@@ -20,6 +22,9 @@ h2 {
     }
 }
 
+p {
+    font-weight: 300;
+}
 
 /* Links */
 a, a:link, a:visited  {
