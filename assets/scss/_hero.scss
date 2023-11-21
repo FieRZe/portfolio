@@ -163,7 +163,6 @@
     }
 
     &__name > p {
-        font-weight: 300;
         font-size: 1.125rem; // 18px
 
         @include breakpoint-up("md") {
