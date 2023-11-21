@@ -203,6 +203,12 @@ body {
   grid-row-start: photo;
 }
 
+.skill-progress-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content repeat(9);
+}
+
 @media (max-width: 63.99875em) {
   .hide-for-mobile {
     display: none;
@@ -447,7 +453,7 @@ body {
   height: 55px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 36px;
 }
 @media (min-width: 36em) {
   .title {
@@ -479,10 +485,21 @@ body {
   background-color: #1B5C81;
 }
 
+.skill-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.skill-flex-container > .skill-name {
+  font-size: 10px;
+}
+
 .progress {
   position: relative;
   height: 50px;
   width: 50px;
+  margin-bottom: 8px;
 }
 .progress-outer {
   position: absolute;
