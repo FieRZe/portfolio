@@ -505,7 +505,7 @@ body {
   background-color: #342C3C;
   box-shadow: inset 3px 3px 3px -1px rgba(0, 0, 0, 0.6), inset -1px -1px 2px -1px rgba(0, 0, 0, 0.55);
 }
-.progress-percentage {
+.progress-number, .progress-percentage {
   font-size: 8px;
 }
 .progress-stroke {
@@ -515,11 +515,4 @@ body {
   stroke-width: 7px;
   stroke-dasharray: 128;
   stroke-dashoffset: 127;
-  animation: anim 2s linear forwards 2s;
-}
-
-@keyframes anim {
-  100% {
-    stroke-dashoffset: 39;
-  }
 }/*# sourceMappingURL=style.css.map */

@@ -89,7 +89,7 @@
                     inset -1px -1px 2px -1px rgba(0,0,0, 0.55);
     }
 
-    &-percentage {
+    &-number, &-percentage {
         font-size: 8px;
     }
 
@@ -100,13 +100,5 @@
         stroke-width: 7px;
         stroke-dasharray: 128;
         stroke-dashoffset: 127;
-        animation: anim 2s linear forwards 2s;
-    }
-}
-
-@keyframes anim {
-
-    100% {
-        stroke-dashoffset: 39;
     }
 }
