@@ -1,0 +1,11 @@
+.invisible {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition: 0.7s ease;
+}

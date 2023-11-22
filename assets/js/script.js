@@ -2,6 +2,7 @@
 const style = window.document.styleSheets[0];
 
 /* Увеличение процентов от нуля до указанного числа */
+//#region
 
 // Список всех skill ID и соответствующие им проценты
 // {key: value}
@@ -43,3 +44,35 @@ skills.forEach(skill => {
     style.insertRule(skillClassRule);
     style.insertRule(keyframesRule);
 });
+
+//#endregion
+
+/* Появление элементов при скроллинге */
+//#region 
+
+const options = {
+    //rootMargin: "0px",
+    threshold: [ 0.5 ]
+};
+
+// объявляем callback-функцию, которая будет срабатывать при пересечении
+function onIntersection(entries) {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+        } 
+    })
+}
+
+// создаём observer
+const observer = new IntersectionObserver(onIntersection, options)
+
+// получаем элементы, за которыми наблюдаем
+const fadeInElements = document.querySelectorAll(".invisible");
+// подписываем элементы на observer
+fadeInElements.forEach((e) => {observer.observe(e)});
+
+
+
+//#endregion
+
