@@ -77,7 +77,7 @@
     </header>
 
     <section class="skills container--px">
-        <div class="title invisible">
+        <div class="title show-on-scroll">
             <div class="title__left">
                 <div class="title__circle"></div>
                 <div class="title__line"></div>
@@ -90,7 +90,7 @@
         </div>
 
         <div class="skill-progress-grid">
-            <div class="skill-flex-container invisible">
+            <div class="skill-flex-container show-on-scroll">
                 <div id="skill-progress__js" class="progress">
                     <div class="progress-outer">
                         <div class="progress-inner">
@@ -109,11 +109,29 @@
             </div>
 
 
-            <div class="skill-flex-container invisible">
-                <div id="skill-progress__html" class="progress">
+            <div class="skill-flex-container show-on-scroll">
+                <div id="skill-progress__react" class="progress">
                     <div class="progress-outer">
                         <div class="progress-inner">
                             <div class="progress-number">20</div>
+                            <div class="progress-percentage">%</div>
+                        </div>
+                    </div>
+
+                    <svg class="progress-stroke react" width="86" height="86">
+                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
+                        transform="rotate(-90, 25, 25)"/>
+                    </svg>
+                </div>
+
+                <div class="skill-name">React</div>
+            </div>
+
+            <div class="skill-flex-container show-on-scroll">
+                <div id="skill-progress__html" class="progress">
+                    <div class="progress-outer">
+                        <div class="progress-inner">
+                            <div class="progress-number">75</div>
                             <div class="progress-percentage">%</div>
                         </div>
                     </div>
@@ -124,14 +142,33 @@
                     </svg>
                 </div>
 
-                <div class="skill-name">React</div>
+                <div class="skill-name">HTML</div>
             </div>
 
-            <div class="skill-flex-container invisible">
+
+            <div class="skill-flex-container show-on-scroll">
+                <div id="skill-progress__rn" class="progress">
+                    <div class="progress-outer">
+                        <div class="progress-inner">
+                            <div class="progress-number">25</div>
+                            <div class="progress-percentage">%</div>
+                        </div>
+                    </div>
+
+                    <svg class="progress-stroke rn" width="86" height="86">
+                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
+                        transform="rotate(-90, 25, 25)"/>
+                    </svg>
+                </div>
+
+                <div class="skill-name">React Native</div>
+            </div>
+
+            <div class="skill-flex-container show-on-scroll">
                 <div id="skill-progress__css" class="progress">
                     <div class="progress-outer">
                         <div class="progress-inner">
-                            <div class="progress-number">75</div>
+                            <div class="progress-number">25</div>
                             <div class="progress-percentage">%</div>
                         </div>
                     </div>
@@ -142,48 +179,11 @@
                     </svg>
                 </div>
 
-                <div class="skill-name">HTML</div>
-            </div>
-
-
-            <div class="skill-flex-container invisible">
-                <div id="skill-progress__react" class="progress">
-                    <div class="progress-outer">
-                        <div class="progress-inner">
-                            <div class="progress-number">25</div>
-                            <div class="progress-percentage">%</div>
-                        </div>
-                    </div>
-
-                    <svg class="progress-stroke react" width="86" height="86">
-                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
-                        transform="rotate(-90, 25, 25)"/>
-                    </svg>
-                </div>
-
-                <div class="skill-name">React Native</div>
-            </div>
-
-            <div class="skill-flex-container invisible">
-                <div id="skill-progress__react" class="progress">
-                    <div class="progress-outer">
-                        <div class="progress-inner">
-                            <div class="progress-number">25</div>
-                            <div class="progress-percentage">%</div>
-                        </div>
-                    </div>
-
-                    <svg class="progress-stroke react" width="86" height="86">
-                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
-                        transform="rotate(-90, 25, 25)"/>
-                    </svg>
-                </div>
-
                 <div class="skill-name">CSS</div>
             </div>
 
-            <div class="skill-flex-container invisible">
-                <div id="skill-progress__react" class="progress">
+            <div class="skill-flex-container show-on-scroll">
+                <div id="skill-progress__json" class="progress">
                     <div class="progress-outer">
                         <div class="progress-inner">
                             <div class="progress-number">25</div>
@@ -191,7 +191,7 @@
                         </div>
                     </div>
 
-                    <svg class="progress-stroke react" width="86" height="86">
+                    <svg class="progress-stroke json" width="86" height="86">
                         <circle r="35" cx="7" cy="43" stroke-linecap="round"
                         transform="rotate(-90, 25, 25)"/>
                     </svg>
@@ -200,8 +200,8 @@
                 <div class="skill-name">JSON</div>
             </div>
 
-            <div class="skill-flex-container invisible">
-                <div id="skill-progress__react" class="progress">
+            <div class="skill-flex-container show-on-scroll">
+                <div id="skill-progress__sass" class="progress">
                     <div class="progress-outer">
                         <div class="progress-inner">
                             <div class="progress-number">25</div>
@@ -209,7 +209,7 @@
                         </div>
                     </div>
 
-                    <svg class="progress-stroke react" width="86" height="86">
+                    <svg class="progress-stroke sass" width="86" height="86">
                         <circle r="35" cx="7" cy="43" stroke-linecap="round"
                         transform="rotate(-90, 25, 25)"/>
                     </svg>
@@ -218,8 +218,8 @@
                 <div class="skill-name">SASS</div>
             </div>
 
-            <div class="skill-flex-container invisible">
-                <div id="skill-progress__react" class="progress">
+            <div class="skill-flex-container show-on-scroll">
+                <div id="skill-progress__vs" class="progress">
                     <div class="progress-outer">
                         <div class="progress-inner">
                             <div class="progress-number">25</div>
@@ -227,7 +227,7 @@
                         </div>
                     </div>
 
-                    <svg class="progress-stroke react" width="86" height="86">
+                    <svg class="progress-stroke vs" width="86" height="86">
                         <circle r="35" cx="7" cy="43" stroke-linecap="round"
                         transform="rotate(-90, 25, 25)"/>
                     </svg>
@@ -236,8 +236,8 @@
                 <div class="skill-name">VS Code</div>
             </div>
 
-            <div class="skill-flex-container invisible">
-                <div id="skill-progress__react" class="progress">
+            <div class="skill-flex-container show-on-scroll">
+                <div id="skill-progress__ts" class="progress">
                     <div class="progress-outer">
                         <div class="progress-inner">
                             <div class="progress-number">25</div>
@@ -245,7 +245,7 @@
                         </div>
                     </div>
 
-                    <svg class="progress-stroke react" width="86" height="86">
+                    <svg class="progress-stroke ts" width="86" height="86">
                         <circle r="35" cx="7" cy="43" stroke-linecap="round"
                         transform="rotate(-90, 25, 25)"/>
                     </svg>
@@ -254,8 +254,8 @@
                 <div class="skill-name">TypeScript</div>
             </div>
 
-            <div class="skill-flex-container invisible">
-                <div id="skill-progress__react" class="progress">
+            <div class="skill-flex-container show-on-scroll">
+                <div id="skill-progress__bem" class="progress">
                     <div class="progress-outer">
                         <div class="progress-inner">
                             <div class="progress-number">25</div>
@@ -263,7 +263,7 @@
                         </div>
                     </div>
 
-                    <svg class="progress-stroke react" width="86" height="86">
+                    <svg class="progress-stroke bem" width="86" height="86">
                         <circle r="35" cx="7" cy="43" stroke-linecap="round"
                         transform="rotate(-90, 25, 25)"/>
                     </svg>
@@ -272,8 +272,8 @@
                 <div class="skill-name">BEM</div>
             </div>
 
-            <div class="skill-flex-container invisible">
-                <div id="skill-progress__react" class="progress">
+            <div class="skill-flex-container show-on-scroll">
+                <div id="skill-progress__git" class="progress">
                     <div class="progress-outer">
                         <div class="progress-inner">
                             <div class="progress-number">25</div>
@@ -281,7 +281,7 @@
                         </div>
                     </div>
 
-                    <svg class="progress-stroke react" width="86" height="86">
+                    <svg class="progress-stroke git" width="86" height="86">
                         <circle r="35" cx="7" cy="43" stroke-linecap="round"
                         transform="rotate(-90, 25, 25)"/>
                     </svg>
@@ -290,8 +290,8 @@
                 <div class="skill-name">GIT</div>
             </div>
 
-            <div class="skill-flex-container invisible">
-                <div id="skill-progress__react" class="progress">
+            <div class="skill-flex-container show-on-scroll">
+                <div id="skill-progress__figma" class="progress">
                     <div class="progress-outer">
                         <div class="progress-inner">
                             <div class="progress-number">25</div>
@@ -299,7 +299,7 @@
                         </div>
                     </div>
 
-                    <svg class="progress-stroke react" width="86" height="86">
+                    <svg class="progress-stroke figma" width="86" height="86">
                         <circle r="35" cx="7" cy="43" stroke-linecap="round"
                         transform="rotate(-90, 25, 25)"/>
                     </svg>
@@ -309,12 +309,12 @@
             </div>
         </div>
 
-        <p class="skill-note invisible">  
+        <p class="skill-note show-on-scroll">  
             * - Процент изучения установлен субъективно для позиции Junior.
             Получить точную "картину" возможно в процессе собеседования.
         </p>
 
-        <div class="languages skill-flex-container invisible">
+        <div class="languages skill-flex-container show-on-scroll">
             <div id="skill-progress__en" class="progress">
                 <div class="progress-outer">
                     <div class="progress-inner">

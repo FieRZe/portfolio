@@ -134,7 +134,7 @@ a:hover {
   text-decoration: none;
 }
 
-.invisible {
+.show-on-scroll {
   opacity: 0;
   transform: translateY(50px);
 }
