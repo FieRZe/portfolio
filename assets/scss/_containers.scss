@@ -98,6 +98,15 @@ body {
     
 }
 
+// hide desktop menu
+.hide-for-medium {
+    
+    @include breakpoint-down("md"){
+        display: none;
+    }
+    
+}
+
 // hide humburger menu
 .hide-for-desktop {
     height: 100%;
