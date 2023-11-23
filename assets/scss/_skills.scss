@@ -60,8 +60,14 @@
     margin-bottom: 22px;
 }
 
-.skill-name, .skill-note {
-    font-size: 10px;
+
+
+.progress-number, .progress-percentage, .skill-name, .skill-note {
+    font-size: 12px;
+
+    @include breakpoint-up("md"){
+        font-size: 16px;
+    }
 }
 
 .skill-note {
@@ -71,8 +77,8 @@
 .progress {
     position: relative;
 
-    height: 50px;
-    width: 50px;
+    height: 86px;
+    width: 86px;
 
     margin-bottom: 8px;
     
@@ -83,42 +89,40 @@
         justify-content: center;
         align-items: center;
 
-        height: 50px;
-        width: 50px;
+        height: 86px;
+        width: 86px;
         border-radius: 50%;
 
         background-color: $blue-dark;
 
         box-shadow: 3px 3px 3px -1px rgba(0,0,0, 0.50),
                     -1px -1px 2px -1px rgba(0,0,0, 0.70);
-        // border: 1px solid white;
+
     }
 
-    &-inner {display: flex;
+    &-inner {
+        display: flex;
         justify-content: center;
         align-items: center;
 
-        height: 30px;
-        width: 30px;
+        height: 54px;
+        width: 54px;
         border-radius: 50%;
         
         background-color: $purple-dark;
         
         box-shadow: inset 3px 3px 3px -1px rgba(0,0,0, 0.60),
                     inset -1px -1px 2px -1px rgba(0,0,0, 0.55);
-    }
-
-    &-number, &-percentage {
-        font-size: 8px;
+        
     }
 
     &-stroke {
         position: absolute;
         fill: none;
         stroke: $turquoise;
-        stroke-width: 7px;
-        stroke-dasharray: 128;
-        stroke-dashoffset: 127;
+        stroke-width: 10px;
+        stroke-dasharray: 230; 
+        stroke-dashoffset: 229; 
     }
 }
 

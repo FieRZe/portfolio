@@ -8,8 +8,8 @@ const style = window.document.styleSheets[0];
 // {key: value}
 // Ищем по ID префиксу все навыки на странице
 const skillIDPrefix = "skill-progress__";
-// css значение stroke-dashoffset: 127 является 100% от навыка в CSS
-const strokeDashOffsetDefault = 127;
+// css значение stroke-dashoffset: 230 является 100% от навыка в CSS
+const strokeDashOffsetDefault = 230;
 
 // Длина ID префикса, для substring, чтобы получить имя навыка
 const skillIDPrefixLength = skillIDPrefix.length;
