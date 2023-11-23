@@ -58,6 +58,17 @@
     align-items: center;
 
     margin-bottom: 22px;
+
+    @include breakpoint-up("md") {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 16px;
+    }
+}
+
+.languages {
+    width: 50%;
+    transform: translateX(50%);
 }
 
 .progress-number, .progress-percentage, .skill-name, .skill-note {
@@ -69,7 +80,7 @@
 }
 
 .skill-note {
-    margin: 20px 0;
+    margin: 20px 0 42px;
 }
 
 .progress {
@@ -79,6 +90,10 @@
     width: 86px;
 
     margin-bottom: 8px;
+
+    @include breakpoint-up("md"){
+        order: 2;
+    }
     
     &-outer {
         position: absolute;

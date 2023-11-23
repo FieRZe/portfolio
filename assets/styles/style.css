@@ -508,6 +508,18 @@ body {
   align-items: center;
   margin-bottom: 22px;
 }
+@media (min-width: 36em) {
+  .skill-flex-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+}
+
+.languages {
+  width: 50%;
+  transform: translateX(50%);
+}
 
 .progress-number, .progress-percentage, .skill-name, .skill-note {
   font-size: 12px;
@@ -519,7 +531,7 @@ body {
 }
 
 .skill-note {
-  margin: 20px 0;
+  margin: 20px 0 42px;
 }
 
 .progress {
@@ -527,6 +539,11 @@ body {
   height: 86px;
   width: 86px;
   margin-bottom: 8px;
+}
+@media (min-width: 36em) {
+  .progress {
+    order: 2;
+  }
 }
 .progress-outer {
   position: absolute;
