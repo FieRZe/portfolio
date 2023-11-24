@@ -547,18 +547,21 @@ body {
   margin: 20px 0 42px;
 }
 
+.progress-helper-container {
+  display: flex;
+}
+@media (min-width: 36em) {
+  .progress-helper-container {
+    order: 2;
+  }
+}
 .progress-circle {
   position: relative;
   height: 86px;
   width: 86px;
   margin-bottom: 8px;
 }
-@media (min-width: 36em) {
-  .progress-circle {
-    order: 2;
-  }
-}
-.progress-outer {
+.progress-circle-outer {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -569,7 +572,7 @@ body {
   background-color: #20456F;
   box-shadow: 3px 3px 3px -1px rgba(0, 0, 0, 0.5), -1px -1px 2px -1px rgba(0, 0, 0, 0.7);
 }
-.progress-inner {
+.progress-circle-inner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -605,9 +608,27 @@ body {
   position: absolute;
   display: flex;
   height: 4px;
-  width: 50%;
+  width: 0;
   border-radius: 4px;
   background-color: #119199;
+}
+
+.skill-progress-result {
+  height: 86px;
+  width: 86px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 48em) {
+  .skill-progress-result {
+    position: relative;
+    height: -moz-min-content;
+    height: min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
 }
 
 @media (min-width: 48em) {
@@ -619,5 +640,14 @@ body {
 @media (max-width: 47.99875em) {
   .hide-progress-bar {
     display: none;
+  }
+}
+
+@keyframes anim-progress-js {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
   }
 }/*# sourceMappingURL=style.css.map */

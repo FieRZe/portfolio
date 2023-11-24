@@ -91,6 +91,16 @@
 
 .progress {
 
+    &-helper-container{
+
+        display: flex;
+
+        @include breakpoint-up("md"){
+            order: 2;
+        }
+        
+    }
+
     &-circle {
         position: relative;
 
@@ -99,44 +109,43 @@
 
         margin-bottom: 8px;
 
-        @include breakpoint-up("md"){
-            order: 2;
+
+        &-outer {
+            position: absolute;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            height: 86px;
+            width: 86px;
+            border-radius: 50%;
+    
+            background-color: $blue-dark;
+    
+            box-shadow: 3px 3px 3px -1px rgba(0,0,0, 0.50),
+                        -1px -1px 2px -1px rgba(0,0,0, 0.70);
+    
+        }
+    
+        &-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            height: 54px;
+            width: 54px;
+            border-radius: 50%;
+            
+            background-color: $purple-dark;
+            
+            box-shadow: inset 3px 3px 3px -1px rgba(0,0,0, 0.60),
+                        inset -1px -1px 2px -1px rgba(0,0,0, 0.55);
+            
         }
     }
     
-    &-outer {
-        position: absolute;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        height: 86px;
-        width: 86px;
-        border-radius: 50%;
-
-        background-color: $blue-dark;
-
-        box-shadow: 3px 3px 3px -1px rgba(0,0,0, 0.50),
-                    -1px -1px 2px -1px rgba(0,0,0, 0.70);
-
-    }
-
-    &-inner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        height: 54px;
-        width: 54px;
-        border-radius: 50%;
-        
-        background-color: $purple-dark;
-        
-        box-shadow: inset 3px 3px 3px -1px rgba(0,0,0, 0.60),
-                    inset -1px -1px 2px -1px rgba(0,0,0, 0.55);
-        
-    }
+    
 
     &-stroke {
         position: absolute;
@@ -173,15 +182,33 @@
         
 
         height: 4px;
-        width: 50%;
+        width: 0;
         border-radius: 4px;
         
         background-color: $turquoise;
 
+            // @include breakpoint-up("lg"){            
+            //     animation: anim-progress-js 2s ease forwards;
+            // }
         }
     }
 }
 
+.skill-progress-result {
+    height: 86px;
+    width: 86px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint-up("lg"){
+        position: relative;
+        height: min-content;
+        width: min-content;
+    }
+    
+}
 
 
 
@@ -195,5 +222,15 @@
 .hide-progress-bar {
     @include breakpoint-down("md"){
         display: none;
+    }
+}
+
+
+@keyframes anim-progress-js {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 70%;
     }
 }

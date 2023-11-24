@@ -90,20 +90,28 @@
         </div>
 
         <div class="skill-progress-grid">
-            <div class="progress skill-flex-container show-on-scroll">
-                <div id="skill-progress__js" class="progress-circle hide-progress-circle">
-                    <div class="progress-outer">
-                        <div class="progress-inner">
-                            <div class="progress-number">70</div>
-                            <div class="progress-percentage">%</div>
+            <div id="skill-progress__js" class="progress skill-flex-container show-on-scroll">
+                
+                <div class="progress-helper-container">
+                    <div class="progress-circle hide-progress-circle">
+                        <div class="progress-circle-outer">
+                            <div class="progress-circle-inner">
+                                <!-- progress-number - есть в js -->
+                            </div>
                         </div>
+
+                        <svg class="progress-stroke js" width="86" height="86">
+                            <circle r="35" cx="7" cy="43" stroke-linecap="round"
+                            transform="rotate(-90, 25, 25)"/>
+                        </svg>
                     </div>
 
-                    <svg class="progress-stroke js" width="86" height="86">
-                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
-                        transform="rotate(-90, 25, 25)"/>
-                    </svg>
+                    <div class="skill-progress-result">
+                        <div class="progress-number">70</div> 
+                        <div class="progress-percentage">%</div>
+                    </div>
                 </div>
+                
 
                 <div id="skill-progress-bar__js" class="progress-bar hide-progress-bar">
                     <span class="progress-bar-outer"></span>

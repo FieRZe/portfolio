@@ -52,32 +52,89 @@ const onIntersectionFillProgress = (skillsEntries) => {
     skillsEntries.forEach((entry) => {
         // В каждом навыке, который попадает в область видимости
         if(entry.isIntersecting) {
-            console.log(entry.target);
-
             // получаем уникальный class-префикс с именем навыка
             const skillClassPrefix = entry.target.id.substring(skillIDPrefixLength);
 
             // из html конвертируем установленный процент прогресса навыка string в int
             const skillPercentsHtml = Number(entry.target.querySelector(".progress-number").textContent);
 
-            // пересчёт html число в stroke-dashoffset для анимации
+            // пересчёт html число в stroke-dashoffset для анимации кругового бара
             const skillStrokeDashOffset = strokeDashOffsetDefault - (strokeDashOffsetDefault / 100 * skillPercentsHtml);
-            
-            // подготовка css стиля для добавления анимации с уникальным именем
+            // пересчёт html число в width для анимации линейного бара
+            const skillWidth = skillPercentsHtml;
+
+
+            // подготовка css стиля для добавления анимации заполнения кругового бара
             const skillClassRule = `.${skillClassPrefix} {
                 animation: anim-${skillClassPrefix} 2s linear forwards;
-            }`
+            }`;
 
-            // подготовка css keyframes с уникальным именем
+            // подготовка css keyframes с уникальным именем для анимации заполнения кругового бара
             const keyframesRule = `@keyframes anim-${skillClassPrefix} {
                 100% {
                     stroke-dashoffset: ${skillStrokeDashOffset};
                 }
-            }`
+            }`;
+
+            
+            // Добавляем progress-helper-container дополнительный класс для данного навыка
+            const helperContainer = entry.target.querySelector(".progress-helper-container")
+
+            if(helperContainer){
+                console.log("Enters helperContainer scope");
+                // подготовка css стиля для добавления анимации передвижения процентов
+                const skillPercentsMoveRule = `.progress-helper-container-${skillClassPrefix} {
+                    @media (min-width: 48em) {
+                        justify-content: end;
+                        width: 0;
+                        margin-left: 3%;
+                        animation: anim-progress-${skillClassPrefix} 2s ease forwards;
+                    }
+                }`;
+
+
+                
+                // подготовка css стиля для добавления анимации заполнения линейного бара
+                const skillProgressBarRule = `.progress-bar-inner-${skillClassPrefix} {
+                    @media (min-width: 48em) {
+                        animation: anim-progress-${skillClassPrefix} 2s ease forwards;
+                    }
+                    
+                }`;
+
+
+                // подготовка css keyframes с уникальным именем для анимации заполнения линейного бара
+                const keyframesProgressBarRule = `@keyframes anim-progress-${skillClassPrefix} {
+                    0% {
+                        width: 0;
+                    }
+                    100% {
+                        width: ${skillWidth}%;
+                    }
+                }`;
+
+                
+                
+
+                style.insertRule(skillPercentsMoveRule);
+                style.insertRule(skillProgressBarRule);
+                style.insertRule(keyframesProgressBarRule);
+
+                
+                helperContainer.classList.add(`progress-helper-container-${skillClassPrefix}`);
+                // Добавляем progress-helper-container дополнительный класс для данного навыка
+                entry.target.querySelector(".progress-bar-inner").classList.add(`progress-bar-inner-${skillClassPrefix}`);
+
+            }
+
 
             // Добавить правила в текущий style.css
             style.insertRule(skillClassRule);
             style.insertRule(keyframesRule);
+            
+
+
+
             }
         })
 
@@ -91,34 +148,13 @@ const skills = document.querySelectorAll(`[id^=${skillIDPrefix}]`);
 
 // подписываем элементы на observerSkills
 skills.forEach((s) => {observerSkills.observe(s)});
-// // В каждом навыке
-// skills.forEach(skill => {
-//     // получаем уникальный class-префикс с именем навыка
-//     const skillClassPrefix = skill.id.substring(skillIDPrefixLength);
-
-//     // из html конвертируем установленный процент прогресса навыка string в int
-//     const skillPercentsHtml = Number(skill.querySelector(".progress-number").textContent);
-
-//     // пересчёт html число в stroke-dashoffset для анимации
-//     const skillStrokeDashOffset = strokeDashOffsetDefault - (strokeDashOffsetDefault / 100 * skillPercentsHtml);
-    
-//     // подготовка css стиля для добавления анимации с уникальным именем
-//     const skillClassRule = `.${skillClassPrefix} {
-//         animation: anim-${skillClassPrefix} 2s linear forwards 2s;
-//     }`
-
-//     // подготовка css keyframes с уникальным именем
-//     const keyframesRule = `@keyframes anim-${skillClassPrefix} {
-//         100% {
-//             stroke-dashoffset: ${skillStrokeDashOffset};
-//         }
-//     }`
-
-//     // Добавить правила в текущий style.css
-//     style.insertRule(skillClassRule);
-//     style.insertRule(keyframesRule);
-// });
 
 //#endregion
 
+
+const ruleList = document.styleSheets[0].cssRules;
+
+for (let i = 0; i < ruleList.length; i++) {
+  console.log(ruleList[i]);
+}
 
