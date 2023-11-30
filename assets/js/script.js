@@ -1,8 +1,6 @@
 // Текущий style.css на странице в который будем добавлять стили:
 const style = window.document.styleSheets[0];
 
-
-
 /* Появление элементов при скроллинге */
 //#region 
 
@@ -46,7 +44,6 @@ const strokeDashOffsetDefault = 230;
 
 // Длина ID префикса, для substring, чтобы получить имя навыка
 const skillIDPrefixLength = skillIDPrefix.length;
-
 // Объявляем callback-функцию, которая будет срабатывать при пересечении
 const onIntersectionFillProgress = (skillsEntries) => {
     skillsEntries.forEach((entry) => {
@@ -63,7 +60,6 @@ const onIntersectionFillProgress = (skillsEntries) => {
             // пересчёт html число в width для анимации линейного бара
             const skillWidth = skillPercentsHtml;
 
-
             // подготовка css стиля для добавления анимации заполнения кругового бара
             const skillClassRule = `.${skillClassPrefix} {
                 animation: anim-${skillClassPrefix} 2s linear forwards;
@@ -79,24 +75,25 @@ const onIntersectionFillProgress = (skillsEntries) => {
             
             // Добавляем progress-helper-container дополнительный класс для данного навыка
             const helperContainer = entry.target.querySelector(".progress-helper-container")
-
+            
             if(helperContainer){
-                console.log("Enters helperContainer scope");
+                
                 // подготовка css стиля для добавления анимации передвижения процентов
                 const skillPercentsMoveRule = `.progress-helper-container-${skillClassPrefix} {
                     @media (min-width: 48em) {
                         justify-content: end;
-                        width: 0;
+                        width: ${skillWidth}%;
                         margin-left: 3%;
                         animation: anim-progress-${skillClassPrefix} 2s ease forwards;
                     }
                 }`;
 
 
-                
+                console.log("skillPercentsHtml = " + skillPercentsHtml);
                 // подготовка css стиля для добавления анимации заполнения линейного бара
                 const skillProgressBarRule = `.progress-bar-inner-${skillClassPrefix} {
                     @media (min-width: 48em) {
+                        width: ${skillPercentsHtml}%;
                         animation: anim-progress-${skillClassPrefix} 2s ease forwards;
                     }
                     
@@ -119,7 +116,7 @@ const onIntersectionFillProgress = (skillsEntries) => {
                 style.insertRule(skillPercentsMoveRule);
                 style.insertRule(skillProgressBarRule);
                 style.insertRule(keyframesProgressBarRule);
-
+                
                 
                 helperContainer.classList.add(`progress-helper-container-${skillClassPrefix}`);
                 // Добавляем progress-helper-container дополнительный класс для данного навыка

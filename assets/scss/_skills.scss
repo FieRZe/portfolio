@@ -203,6 +203,7 @@
     align-items: center;
 
     @include breakpoint-up("lg"){
+        margin: 10px 0;
         position: relative;
         height: min-content;
         width: min-content;
@@ -226,11 +227,11 @@
 }
 
 
-@keyframes anim-progress-js {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 70%;
-    }
-}
+// @keyframes anim-progress-js {
+//     0% {
+//         width: 0;
+//     }
+//     100% {
+//         width: 70%;
+//     }
+// }

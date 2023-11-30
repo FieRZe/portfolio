@@ -623,6 +623,7 @@ body {
 }
 @media (min-width: 48em) {
   .skill-progress-result {
+    margin: 10px 0;
     position: relative;
     height: -moz-min-content;
     height: min-content;
@@ -640,14 +641,5 @@ body {
 @media (max-width: 47.99875em) {
   .hide-progress-bar {
     display: none;
-  }
-}
-
-@keyframes anim-progress-js {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 70%;
   }
 }/*# sourceMappingURL=style.css.map */
