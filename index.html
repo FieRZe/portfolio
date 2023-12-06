@@ -13,66 +13,58 @@
 
     <header class="header grid">
 
-    <!-- <div class="container container--px"> -->
-    <nav class="navigaion__links-menu hide-for-mobile grid--main-column grid--navigation-row">
-        <ul class="header-menu__items">
-            <li class="header-menu__item">
-                <a class="header-menu__link container--py" href="#">Главная</a>
-            </li>
-            <li class="header-menu__item">
-                <a class="header-menu__link container--py" href="#">Проекты</a>
-            </li>
-            <li class="header-menu__item">
-                <a class="header-menu__link container--py" href="#">Биография</a>
-            </li>
-            <li class="header-menu__item">
-                <a class="header-menu__link container--py" href="#">Резюме</a>
-            </li>
-            <li class="header-menu__item">
-                <a class="header-menu__link container--py" href="#">Контакты</a>
-            </li>
-        </ul>
-    </nav>
-    <nav class="navigation__humburger-menu hide-for-desktop grid--right-column grid--navigation-row container--pt container--pr">
-        <div class="navigation__humburger-menu__button">
-            <span></span>
-            <span></span>
-            <span></span>
+        <nav class="navigaion__links-menu hide-for-mobile grid--main-column grid--navigation-row">
+            <ul class="header-menu__items">
+                <li class="header-menu__item">
+                    <a class="header-menu__link container--py" href="#">Главная</a>
+                </li>
+                <li class="header-menu__item">
+                    <a class="header-menu__link container--py" href="#">Проекты</a>
+                </li>
+                <li class="header-menu__item">
+                    <a class="header-menu__link container--py" href="#">Биография</a>
+                </li>
+                <li class="header-menu__item">
+                    <a class="header-menu__link container--py" href="#">Резюме</a>
+                </li>
+                <li class="header-menu__item">
+                    <a class="header-menu__link container--py" href="#">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="navigation__humburger-menu hide-for-desktop grid--right-column grid--navigation-row container--pt container--pr">
+            <div class="navigation__humburger-menu__button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        <div class="hero__ribbon--wrapper grid--left-column grid--navigation-row">
+            <div class="hero__ribbon--color"></div>
+            <!-- <div class="hero__ribbon--right-column"></div> -->
         </div>
-    </nav>
-    <!-- </div> -->
+        
+        <div class="hero__content--photo-column grid--main-column grid--photo-row">
+            <img class="hero__photo " src="./assets/img/photo.png" alt="Фото соискателя. Илья.">
 
+        </div>
 
-    <!-- <section class="hero "> -->
-        <!-- <div class="hero__content"> -->
-            <div class="hero__ribbon--wrapper grid--left-column grid--navigation-row">
-                <div class="hero__ribbon--color"></div>
-                <!-- <div class="hero__ribbon--right-column"></div> -->
+        <div class="hero__content--main-column grid--main-column grid--hero-row">
+            <div class="hero__name">
+                <p>Илья V.</p>
             </div>
 
-            
-            <div class="hero__content--photo-column grid--main-column grid--photo-row">
-                <img class="hero__photo " src="./assets/img/photo.png" alt="Фото соискателя. Илья.">
-
+            <div class="hero__position">
+                <h1>Front-End Разработчик</h1>
             </div>
-
-            <div class="hero__content--main-column grid--main-column grid--hero-row">
-                <div class="hero__name">
-                    <p>Илья V.</p>
-                </div>
-
-                <div class="hero__position">
-                    <h1>Front-End Разработчик</h1>
-                </div>
-                <div class="hero__cta">
-                    <a class="hero__contact cta" href="#">Связаться</a>
-                    <a class="hero__cv cta" href="#">Резюме</a>
-                </div>
+            <div class="hero__cta">
+                <a class="hero__contact cta" href="#">Связаться</a>
+                <a class="hero__cv cta" href="#">Резюме</a>
             </div>
+        </div>
 
-            <div class="hero__bubble bubble"></div>
-        <!-- </div> -->
-    <!-- </section> -->
+        <div class="hero__bubble bubble"></div>
 
     </header>
 
@@ -89,15 +81,14 @@
             </div>
         </div>
 
+
         <div class="skill-progress-grid">
             <div id="skill-progress__js" class="progress skill-flex-container show-on-scroll">
                 
                 <div class="progress-helper-container">
                     <div class="progress-circle hide-progress-circle">
                         <div class="progress-circle-outer">
-                            <div class="progress-circle-inner">
-                                <!-- progress-number - есть в js -->
-                            </div>
+                            <div class="progress-circle-inner"></div>
                         </div>
 
                         <svg class="progress-stroke js" width="86" height="86">
@@ -107,7 +98,7 @@
                     </div>
 
                     <div class="skill-progress-result">
-                        <div class="progress-number">30</div> 
+                        <div class="progress-number">65</div> 
                         <div class="progress-percentage">%</div>
                     </div>
                 </div>
@@ -122,200 +113,330 @@
             </div>
 
 
-            <div class="progress skill-flex-container show-on-scroll">
-                <div id="skill-progress__react" class="progress-circle hide-progress-circle">
-                    <div class="progress-outer">
-                        <div class="progress-inner">
-                            <div class="progress-number">20</div>
-                            <div class="progress-percentage">%</div>
+            <div id="skill-progress__react" class="progress skill-flex-container show-on-scroll">
+                
+                <div class="progress-helper-container">
+                    <div class="progress-circle hide-progress-circle">
+                        <div class="progress-circle-outer">
+                            <div class="progress-circle-inner"></div>
                         </div>
+
+                        <svg class="progress-stroke react" width="86" height="86">
+                            <circle r="35" cx="7" cy="43" stroke-linecap="round"
+                            transform="rotate(-90, 25, 25)"/>
+                        </svg>
                     </div>
 
-                    <svg class="progress-stroke react" width="86" height="86">
-                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
-                        transform="rotate(-90, 25, 25)"/>
-                    </svg>
+                    <div class="skill-progress-result">
+                        <div class="progress-number">45</div> 
+                        <div class="progress-percentage">%</div>
+                    </div>
+                </div>
+                
+
+                <div id="skill-progress-bar__react" class="progress-bar hide-progress-bar">
+                    <span class="progress-bar-outer"></span>
+                    <span class="progress-bar-inner"></span>
                 </div>
 
                 <div class="skill-name">React</div>
             </div>
 
-            <div class="progress skill-flex-container show-on-scroll">
-                <div id="skill-progress__html" class="progress-circle hide-progress-circle">
-                    <div class="progress-outer">
-                        <div class="progress-inner">
-                            <div class="progress-number">75</div>
-                            <div class="progress-percentage">%</div>
+
+            <div id="skill-progress__html" class="progress skill-flex-container show-on-scroll">
+                
+                <div class="progress-helper-container">
+                    <div class="progress-circle hide-progress-circle">
+                        <div class="progress-circle-outer">
+                            <div class="progress-circle-inner"></div>
                         </div>
+
+                        <svg class="progress-stroke html" width="86" height="86">
+                            <circle r="35" cx="7" cy="43" stroke-linecap="round"
+                            transform="rotate(-90, 25, 25)"/>
+                        </svg>
                     </div>
 
-                    <svg class="progress-stroke html" width="86" height="86">
-                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
-                        transform="rotate(-90, 25, 25)"/>
-                    </svg>
+                    <div class="skill-progress-result">
+                        <div class="progress-number">75</div> 
+                        <div class="progress-percentage">%</div>
+                    </div>
+                </div>
+                
+
+                <div id="skill-progress-bar__html" class="progress-bar hide-progress-bar">
+                    <span class="progress-bar-outer"></span>
+                    <span class="progress-bar-inner"></span>
                 </div>
 
                 <div class="skill-name">HTML</div>
             </div>
 
 
-            <div class="progress skill-flex-container show-on-scroll">
-                <div id="skill-progress__rn" class="progress-circle hide-progress-circle">
-                    <div class="progress-outer">
-                        <div class="progress-inner">
-                            <div class="progress-number">25</div>
-                            <div class="progress-percentage">%</div>
+            <div id="skill-progress__rn" class="progress skill-flex-container show-on-scroll">
+                
+                <div class="progress-helper-container">
+                    <div class="progress-circle hide-progress-circle">
+                        <div class="progress-circle-outer">
+                            <div class="progress-circle-inner"></div>
                         </div>
+
+                        <svg class="progress-stroke rn" width="86" height="86">
+                            <circle r="35" cx="7" cy="43" stroke-linecap="round"
+                            transform="rotate(-90, 25, 25)"/>
+                        </svg>
                     </div>
 
-                    <svg class="progress-stroke rn" width="86" height="86">
-                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
-                        transform="rotate(-90, 25, 25)"/>
-                    </svg>
+                    <div class="skill-progress-result">
+                        <div class="progress-number">30</div> 
+                        <div class="progress-percentage">%</div>
+                    </div>
+                </div>
+                
+
+                <div id="skill-progress-bar__rn" class="progress-bar hide-progress-bar">
+                    <span class="progress-bar-outer"></span>
+                    <span class="progress-bar-inner"></span>
                 </div>
 
                 <div class="skill-name">React Native</div>
             </div>
 
-            <div class="progress skill-flex-container show-on-scroll">
-                <div id="skill-progress__css" class="progress-circle hide-progress-circle">
-                    <div class="progress-outer">
-                        <div class="progress-inner">
-                            <div class="progress-number">25</div>
-                            <div class="progress-percentage">%</div>
+
+            <div id="skill-progress__css" class="progress skill-flex-container show-on-scroll">
+                
+                <div class="progress-helper-container">
+                    <div class="progress-circle hide-progress-circle">
+                        <div class="progress-circle-outer">
+                            <div class="progress-circle-inner"></div>
                         </div>
+
+                        <svg class="progress-stroke css" width="86" height="86">
+                            <circle r="35" cx="7" cy="43" stroke-linecap="round"
+                            transform="rotate(-90, 25, 25)"/>
+                        </svg>
                     </div>
 
-                    <svg class="progress-stroke css" width="86" height="86">
-                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
-                        transform="rotate(-90, 25, 25)"/>
-                    </svg>
+                    <div class="skill-progress-result">
+                        <div class="progress-number">60</div> 
+                        <div class="progress-percentage">%</div>
+                    </div>
+                </div>
+                
+
+                <div id="skill-progress-bar__css" class="progress-bar hide-progress-bar">
+                    <span class="progress-bar-outer"></span>
+                    <span class="progress-bar-inner"></span>
                 </div>
 
                 <div class="skill-name">CSS</div>
             </div>
 
-            <div class="progress skill-flex-container show-on-scroll">
-                <div id="skill-progress__json" class="progress-circle hide-progress-circle">
-                    <div class="progress-outer">
-                        <div class="progress-inner">
-                            <div class="progress-number">25</div>
-                            <div class="progress-percentage">%</div>
+
+            <div id="skill-progress__json" class="progress skill-flex-container show-on-scroll">
+                
+                <div class="progress-helper-container">
+                    <div class="progress-circle hide-progress-circle">
+                        <div class="progress-circle-outer">
+                            <div class="progress-circle-inner"></div>
                         </div>
+
+                        <svg class="progress-stroke json" width="86" height="86">
+                            <circle r="35" cx="7" cy="43" stroke-linecap="round"
+                            transform="rotate(-90, 25, 25)"/>
+                        </svg>
                     </div>
 
-                    <svg class="progress-stroke json" width="86" height="86">
-                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
-                        transform="rotate(-90, 25, 25)"/>
-                    </svg>
+                    <div class="skill-progress-result">
+                        <div class="progress-number">20</div> 
+                        <div class="progress-percentage">%</div>
+                    </div>
+                </div>
+                
+
+                <div id="skill-progress-bar__json" class="progress-bar hide-progress-bar">
+                    <span class="progress-bar-outer"></span>
+                    <span class="progress-bar-inner"></span>
                 </div>
 
                 <div class="skill-name">JSON</div>
             </div>
 
-            <div class="progress skill-flex-container show-on-scroll">
-                <div id="skill-progress__sass" class="progress-circle hide-progress-circle">
-                    <div class="progress-outer">
-                        <div class="progress-inner">
-                            <div class="progress-number">25</div>
-                            <div class="progress-percentage">%</div>
+
+            <div id="skill-progress__sass" class="progress skill-flex-container show-on-scroll">
+                
+                <div class="progress-helper-container">
+                    <div class="progress-circle hide-progress-circle">
+                        <div class="progress-circle-outer">
+                            <div class="progress-circle-inner"></div>
                         </div>
+
+                        <svg class="progress-stroke sass" width="86" height="86">
+                            <circle r="35" cx="7" cy="43" stroke-linecap="round"
+                            transform="rotate(-90, 25, 25)"/>
+                        </svg>
                     </div>
 
-                    <svg class="progress-stroke sass" width="86" height="86">
-                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
-                        transform="rotate(-90, 25, 25)"/>
-                    </svg>
+                    <div class="skill-progress-result">
+                        <div class="progress-number">25</div> 
+                        <div class="progress-percentage">%</div>
+                    </div>
+                </div>
+                
+
+                <div id="skill-progress-bar__sass" class="progress-bar hide-progress-bar">
+                    <span class="progress-bar-outer"></span>
+                    <span class="progress-bar-inner"></span>
                 </div>
 
                 <div class="skill-name">SASS</div>
             </div>
 
-            <div class="progress skill-flex-container show-on-scroll">
-                <div id="skill-progress__vs" class="progress-circle hide-progress-circle">
-                    <div class="progress-outer">
-                        <div class="progress-inner">
-                            <div class="progress-number">25</div>
-                            <div class="progress-percentage">%</div>
+
+            <div id="skill-progress__vscode" class="progress skill-flex-container show-on-scroll">
+                
+                <div class="progress-helper-container">
+                    <div class="progress-circle hide-progress-circle">
+                        <div class="progress-circle-outer">
+                            <div class="progress-circle-inner"></div>
                         </div>
+
+                        <svg class="progress-stroke vscode" width="86" height="86">
+                            <circle r="35" cx="7" cy="43" stroke-linecap="round"
+                            transform="rotate(-90, 25, 25)"/>
+                        </svg>
                     </div>
 
-                    <svg class="progress-stroke vs" width="86" height="86">
-                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
-                        transform="rotate(-90, 25, 25)"/>
-                    </svg>
+                    <div class="skill-progress-result">
+                        <div class="progress-number">70</div> 
+                        <div class="progress-percentage">%</div>
+                    </div>
+                </div>
+                
+
+                <div id="skill-progress-bar__vscode" class="progress-bar hide-progress-bar">
+                    <span class="progress-bar-outer"></span>
+                    <span class="progress-bar-inner"></span>
                 </div>
 
                 <div class="skill-name">VS Code</div>
             </div>
 
-            <div class="progress skill-flex-container show-on-scroll">
-                <div id="skill-progress__ts" class="progress-circle hide-progress-circle">
-                    <div class="progress-outer">
-                        <div class="progress-inner">
-                            <div class="progress-number">25</div>
-                            <div class="progress-percentage">%</div>
+
+            <div id="skill-progress__ts" class="progress skill-flex-container show-on-scroll">
+                
+                <div class="progress-helper-container">
+                    <div class="progress-circle hide-progress-circle">
+                        <div class="progress-circle-outer">
+                            <div class="progress-circle-inner"></div>
                         </div>
+
+                        <svg class="progress-stroke ts" width="86" height="86">
+                            <circle r="35" cx="7" cy="43" stroke-linecap="round"
+                            transform="rotate(-90, 25, 25)"/>
+                        </svg>
                     </div>
 
-                    <svg class="progress-stroke ts" width="86" height="86">
-                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
-                        transform="rotate(-90, 25, 25)"/>
-                    </svg>
+                    <div class="skill-progress-result">
+                        <div class="progress-number">25</div> 
+                        <div class="progress-percentage">%</div>
+                    </div>
+                </div>
+                
+
+                <div id="skill-progress-bar__ts" class="progress-bar hide-progress-bar">
+                    <span class="progress-bar-outer"></span>
+                    <span class="progress-bar-inner"></span>
                 </div>
 
                 <div class="skill-name">TypeScript</div>
             </div>
 
-            <div class="progress skill-flex-container show-on-scroll">
-                <div id="skill-progress__bem" class="progress-circle hide-progress-circle">
-                    <div class="progress-outer">
-                        <div class="progress-inner">
-                            <div class="progress-number">25</div>
-                            <div class="progress-percentage">%</div>
+
+            <div id="skill-progress__bem" class="progress skill-flex-container show-on-scroll">
+                
+                <div class="progress-helper-container">
+                    <div class="progress-circle hide-progress-circle">
+                        <div class="progress-circle-outer">
+                            <div class="progress-circle-inner"></div>
                         </div>
+
+                        <svg class="progress-stroke bem" width="86" height="86">
+                            <circle r="35" cx="7" cy="43" stroke-linecap="round"
+                            transform="rotate(-90, 25, 25)"/>
+                        </svg>
                     </div>
 
-                    <svg class="progress-stroke bem" width="86" height="86">
-                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
-                        transform="rotate(-90, 25, 25)"/>
-                    </svg>
+                    <div class="skill-progress-result">
+                        <div class="progress-number">30</div> 
+                        <div class="progress-percentage">%</div>
+                    </div>
+                </div>
+                
+
+                <div id="skill-progress-bar__bem" class="progress-bar hide-progress-bar">
+                    <span class="progress-bar-outer"></span>
+                    <span class="progress-bar-inner"></span>
                 </div>
 
                 <div class="skill-name">BEM</div>
             </div>
 
-            <div class="progress skill-flex-container show-on-scroll">
-                <div id="skill-progress__git" class="progress-circle hide-progress-circle">
-                    <div class="progress-outer">
-                        <div class="progress-inner">
-                            <div class="progress-number">25</div>
-                            <div class="progress-percentage">%</div>
+
+            <div id="skill-progress__git" class="progress skill-flex-container show-on-scroll">
+                
+                <div class="progress-helper-container">
+                    <div class="progress-circle hide-progress-circle">
+                        <div class="progress-circle-outer">
+                            <div class="progress-circle-inner"></div>
                         </div>
+
+                        <svg class="progress-stroke git" width="86" height="86">
+                            <circle r="35" cx="7" cy="43" stroke-linecap="round"
+                            transform="rotate(-90, 25, 25)"/>
+                        </svg>
                     </div>
 
-                    <svg class="progress-stroke git" width="86" height="86">
-                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
-                        transform="rotate(-90, 25, 25)"/>
-                    </svg>
+                    <div class="skill-progress-result">
+                        <div class="progress-number">30</div> 
+                        <div class="progress-percentage">%</div>
+                    </div>
+                </div>
+                
+
+                <div id="skill-progress-bar__git" class="progress-bar hide-progress-bar">
+                    <span class="progress-bar-outer"></span>
+                    <span class="progress-bar-inner"></span>
                 </div>
 
                 <div class="skill-name">GIT</div>
             </div>
 
-            <div class="progress skill-flex-container show-on-scroll">
-                <div id="skill-progress__figma" class="progress-circle hide-progress-circle">
-                    <div class="progress-outer">
-                        <div class="progress-inner">
-                            <div class="progress-number">25</div>
-                            <div class="progress-percentage">%</div>
+
+            <div id="skill-progress__figma" class="progress skill-flex-container show-on-scroll">
+                
+                <div class="progress-helper-container">
+                    <div class="progress-circle hide-progress-circle">
+                        <div class="progress-circle-outer">
+                            <div class="progress-circle-inner"></div>
                         </div>
+
+                        <svg class="progress-stroke figma" width="86" height="86">
+                            <circle r="35" cx="7" cy="43" stroke-linecap="round"
+                            transform="rotate(-90, 25, 25)"/>
+                        </svg>
                     </div>
 
-                    <svg class="progress-stroke figma" width="86" height="86">
-                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
-                        transform="rotate(-90, 25, 25)"/>
-                    </svg>
+                    <div class="skill-progress-result">
+                        <div class="progress-number">30</div> 
+                        <div class="progress-percentage">%</div>
+                    </div>
+                </div>
+                
+
+                <div id="skill-progress-bar__figma" class="progress-bar hide-progress-bar">
+                    <span class="progress-bar-outer"></span>
+                    <span class="progress-bar-inner"></span>
                 </div>
 
                 <div class="skill-name">Figma</div>
@@ -327,25 +448,38 @@
             Получить точную "картину" возможно в процессе собеседования.
         </p>
 
-        <div class="progress skill-flex-container languages show-on-scroll">
-            <div id="skill-progress__en" class="progress-circle hide-progress-circle">
-                <div class="progress-outer">
-                    <div class="progress-inner">
-                        <div class="progress-number">70</div>
-                        <div class="progress-percentage">%</div>
+        <div id="skill-progress__en" class="progress skill-flex-container languages show-on-scroll">
+                
+            <div class="progress-helper-container">
+                <div class="progress-circle hide-progress-circle">
+                    <div class="progress-circle-outer">
+                        <div class="progress-circle-inner"></div>
                     </div>
+
+                    <svg class="progress-stroke en" width="86" height="86">
+                        <circle r="35" cx="7" cy="43" stroke-linecap="round"
+                        transform="rotate(-90, 25, 25)"/>
+                    </svg>
                 </div>
 
-                <svg class="progress-stroke en" width="86" height="86">
-                    <circle r="35" cx="7" cy="43"  stroke-linecap="round"
-                    transform="rotate(-90, 25, 25)"/>
-                </svg>
+                <div class="skill-progress-result">
+                    <div class="progress-number">70</div> 
+                    <div class="progress-percentage">%</div>
+                </div>
+            </div>
+            
+
+            <div id="skill-progress-bar__en" class="progress-bar hide-progress-bar">
+                <span class="progress-bar-outer"></span>
+                <span class="progress-bar-inner"></span>
             </div>
 
             <div class="skill-name">English</div>
         </div>
 
     </section>
+
+    <!-- End skills section -->
 </div>
 </body>
 </html>

@@ -74,7 +74,8 @@
 
 .languages {
     width: 50%;
-    transform: translateX(50%);
+    padding-right: 32px;
+    //transform: translateX(50%);
 }
 
 .progress-number, .progress-percentage, .skill-name, .skill-note {

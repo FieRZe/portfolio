@@ -531,7 +531,7 @@ body {
 
 .languages {
   width: 50%;
-  transform: translateX(50%);
+  padding-right: 32px;
 }
 
 .progress-number, .progress-percentage, .skill-name, .skill-note {
