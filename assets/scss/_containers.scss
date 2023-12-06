@@ -6,7 +6,7 @@ body {
 
 .main-wrapper {
     flex-grow: 1;
-    height: 100dvh; // удалить, после вёрстки
+    height: 300vh; // удалить, после вёрстки
     background-color: $purple-dark;
 
     overflow: hidden;
@@ -57,7 +57,7 @@ body {
 .grid {
     display: grid;
     grid-template-columns: [left] 0 [main] 5fr [right] 0 [end];
-    grid-template-rows: [navigation] min-content [photo] min-content [separate-margin] 2rem [hero] min-content [separate-margin] 5.875rem [end];
+    grid-template-rows: [navigation] min-content [photo] min-content [separate-margin] 2rem [hero] min-content [end];
 
     @include breakpoint-up("xl") {
         grid-template-columns: [left] 3fr [main] 5fr [right] 1fr [end];
@@ -84,11 +84,24 @@ body {
     }
 }
 
+.skill-progress-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 // hide desktop menu
 .hide-for-mobile {
     
     @include breakpoint-down("lg"){
+        display: none;
+    }
+    
+}
+
+// hide desktop menu
+.hide-for-medium {
+    
+    @include breakpoint-down("md"){
         display: none;
     }
     

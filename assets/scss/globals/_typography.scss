@@ -1,11 +1,30 @@
 @use "../variables" as variables;
+@use "../mixins" as mixin;
 
-/* Text color */
+
+
+/* Text */
 body {
     color: variables.$white;
     font-family:  Arial, sans-serif;
 }
 
+h2 {
+    font-size: 22px;
+    
+
+    @include mixin.breakpoint-up(md){
+        font-size: 40px;
+    }
+
+    @include mixin.breakpoint-up(lg){
+        font-size: 48px;
+    }
+}
+
+p {
+    font-weight: 300;
+}
 
 /* Links */
 a, a:link, a:visited  {

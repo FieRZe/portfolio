@@ -100,10 +100,28 @@ legend {
   display: block;
 }
 
-/* Text color */
+/* Text */
 body {
   color: #ffffff;
   font-family: Arial, sans-serif;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+@media (min-width: 36em) {
+  h2 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 48em) {
+  h2 {
+    font-size: 48px;
+  }
+}
+p {
+  font-weight: 300;
 }
 
 /* Links */
@@ -116,6 +134,17 @@ a:hover {
   text-decoration: none;
 }
 
+.show-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.7s ease;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -123,7 +152,7 @@ body {
 
 .main-wrapper {
   flex-grow: 1;
-  height: 100dvh;
+  height: 300vh;
   background-color: #342C3C;
   overflow: hidden;
 }
@@ -163,7 +192,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: [left] 0 [main] 5fr [right] 0 [end];
-  grid-template-rows: [navigation] min-content [photo] min-content [separate-margin] 2rem [hero] min-content [separate-margin] 5.875rem [end];
+  grid-template-rows: [navigation] min-content [photo] min-content [separate-margin] 2rem [hero] min-content [end];
 }
 @media (min-width: 64em) {
   .grid {
@@ -189,8 +218,19 @@ body {
   grid-row-start: photo;
 }
 
+.skill-progress-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 @media (max-width: 63.99875em) {
   .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 47.99875em) {
+  .hide-for-medium {
     display: none;
   }
 }
@@ -205,10 +245,36 @@ body {
   }
 }
 
-.header {
-  position: relative;
+.bubble {
+  z-index: 0;
+  position: absolute;
+  border-radius: 100%;
+  background-color: rgba(17, 145, 153, 0.1);
+}
+.bubble--title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 55px;
+}
+@media (min-width: 36em) {
+  .bubble--title {
+    height: 105px;
+    width: 105px;
+  }
 }
 
+.header {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 64em) {
+  .header {
+    margin-bottom: 94px;
+  }
+}
 .header-menu {
   grid-column-start: main;
   height: 4.125rem;
@@ -337,7 +403,6 @@ body {
   }
 }
 .hero__name > p {
-  font-weight: 300;
   font-size: 1.125rem;
 }
 @media (min-width: 36em) {
@@ -377,18 +442,14 @@ body {
   background-color: #1B5C81;
 }
 .hero__bubble {
-  z-index: 0;
   grid-column-start: main;
   grid-row-start: hero;
-  position: absolute;
   top: -4%;
   right: 0;
   transform: translateX(50%);
   display: flex;
   min-width: 128px;
   min-height: 128px;
-  border-radius: 300px;
-  background-color: rgba(17, 145, 153, 0.1);
 }
 @media (min-width: 36em) {
   .hero__bubble {
@@ -402,5 +463,187 @@ body {
     min-width: 204px;
     min-height: 204px;
     top: 15%;
+  }
+}
+
+.skills {
+  margin-bottom: 50px;
+}
+
+.title {
+  position: relative;
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 36px;
+}
+@media (min-width: 36em) {
+  .title {
+    height: 105px;
+  }
+}
+.title > .bubble--title {
+  position: relative;
+  margin: 0 10%;
+}
+.title__left, .title__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+  width: 100%;
+}
+.title__circle {
+  display: block;
+  content: "";
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background-color: #119199;
+}
+.title__line {
+  height: 2px;
+  width: 100%;
+  background-color: #1B5C81;
+}
+
+.skill-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 22px;
+}
+@media (min-width: 36em) {
+  .skill-flex-container {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+@media (min-width: 48em) {
+  .skill-flex-container {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.languages {
+  width: 50%;
+  padding-right: 32px;
+}
+
+.progress-number, .progress-percentage, .skill-name, .skill-note {
+  font-size: 12px;
+}
+@media (min-width: 36em) {
+  .progress-number, .progress-percentage, .skill-name, .skill-note {
+    font-size: 16px;
+  }
+}
+
+.skill-name {
+  font-weight: 700;
+}
+
+.skill-note {
+  margin: 20px 0 42px;
+}
+
+.progress-helper-container {
+  display: flex;
+}
+@media (min-width: 36em) {
+  .progress-helper-container {
+    order: 2;
+  }
+}
+.progress-circle {
+  position: relative;
+  height: 86px;
+  width: 86px;
+  margin-bottom: 8px;
+}
+.progress-circle-outer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 86px;
+  width: 86px;
+  border-radius: 50%;
+  background-color: #20456F;
+  box-shadow: 3px 3px 3px -1px rgba(0, 0, 0, 0.5), -1px -1px 2px -1px rgba(0, 0, 0, 0.7);
+}
+.progress-circle-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 54px;
+  width: 54px;
+  border-radius: 50%;
+  background-color: #342C3C;
+  box-shadow: inset 3px 3px 3px -1px rgba(0, 0, 0, 0.6), inset -1px -1px 2px -1px rgba(0, 0, 0, 0.55);
+}
+.progress-stroke {
+  position: absolute;
+  fill: none;
+  stroke: #119199;
+  stroke-width: 10px;
+  stroke-dasharray: 230;
+  stroke-dashoffset: 229;
+}
+.progress-bar {
+  order: 2;
+  display: flex;
+  align-items: center;
+}
+.progress-bar-outer {
+  position: absolute;
+  display: flex;
+  height: 6px;
+  width: 100%;
+  border-radius: 6px;
+  background-color: #20456F;
+  box-shadow: 3px 3px 3px -1px rgba(0, 0, 0, 0.5), -1px -1px 2px -1px rgba(0, 0, 0, 0.7);
+}
+.progress-bar-inner {
+  position: absolute;
+  display: flex;
+  height: 4px;
+  width: 0;
+  border-radius: 4px;
+  background-color: #119199;
+}
+
+.skill-progress-result {
+  height: 86px;
+  width: 86px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 48em) {
+  .skill-progress-result {
+    margin: 10px 0;
+    position: relative;
+    height: -moz-min-content;
+    height: min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+}
+
+@media (min-width: 48em) {
+  .hide-progress-circle {
+    display: none;
+  }
+}
+
+@media (max-width: 47.99875em) {
+  .hide-progress-bar {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

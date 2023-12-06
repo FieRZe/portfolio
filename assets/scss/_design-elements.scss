@@ -1,0 +1,26 @@
+.bubble {
+    z-index: 0;
+    position: absolute;
+
+
+    border-radius: 100%;
+
+    
+    background-color: rgba($color: $turquoise, $alpha: 0.1);
+
+    &--title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 55px;
+        width: 55px;
+    
+        @include breakpoint-up("md"){
+            height: 105px;
+            width: 105px;
+        }
+    }
+}
+
+
+

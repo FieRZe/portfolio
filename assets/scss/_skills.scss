@@ -1,0 +1,242 @@
+.skills {
+   margin-bottom: 50px;
+}
+
+.title {
+    position: relative;
+    display: flex;
+
+    height: 55px;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 36px;
+
+    @include breakpoint-up("md"){
+        height: 105px;
+    }
+
+    & > .bubble--title {
+        position: relative;
+        margin: 0 10%;
+    }
+
+    &__left, &__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 10px;
+        width: 100%;
+    }
+        
+    &__circle{
+        display: block;
+        content: "";
+        height: 10px;
+        width: 10px;
+
+        border-radius: 10px;
+
+        background-color: $turquoise;
+
+
+    }
+
+    &__line {
+        height: 2px;
+        width: 100%;
+        background-color: $blue-deep;
+    }
+}
+
+
+.skill-flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 22px;
+
+    @include breakpoint-up("md") {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    @include breakpoint-up("lg") {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+.languages {
+    width: 50%;
+    padding-right: 32px;
+    //transform: translateX(50%);
+}
+
+.progress-number, .progress-percentage, .skill-name, .skill-note {
+    font-size: 12px;
+
+    @include breakpoint-up("md"){
+        font-size: 16px;
+    }
+}
+
+.skill-name {
+    font-weight: 700;
+}
+
+.skill-note {
+    margin: 20px 0 42px;
+}
+
+.progress {
+
+    &-helper-container{
+
+        display: flex;
+
+        @include breakpoint-up("md"){
+            order: 2;
+        }
+        
+    }
+
+    &-circle {
+        position: relative;
+
+        height: 86px;
+        width: 86px;
+
+        margin-bottom: 8px;
+
+
+        &-outer {
+            position: absolute;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            height: 86px;
+            width: 86px;
+            border-radius: 50%;
+    
+            background-color: $blue-dark;
+    
+            box-shadow: 3px 3px 3px -1px rgba(0,0,0, 0.50),
+                        -1px -1px 2px -1px rgba(0,0,0, 0.70);
+    
+        }
+    
+        &-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            height: 54px;
+            width: 54px;
+            border-radius: 50%;
+            
+            background-color: $purple-dark;
+            
+            box-shadow: inset 3px 3px 3px -1px rgba(0,0,0, 0.60),
+                        inset -1px -1px 2px -1px rgba(0,0,0, 0.55);
+            
+        }
+    }
+    
+    
+
+    &-stroke {
+        position: absolute;
+        fill: none;
+        stroke: $turquoise;
+        stroke-width: 10px;
+        stroke-dasharray: 230; 
+        stroke-dashoffset: 229; 
+    }
+
+    &-bar {
+        order: 2;
+        display: flex;
+        align-items: center;
+
+        &-outer {
+            position: absolute;
+            display: flex;
+    
+            height: 6px;
+            width: 100%;
+            border-radius: 6px;
+    
+            background-color: $blue-dark;
+    
+            box-shadow: 3px 3px 3px -1px rgba(0,0,0, 0.50),
+                        -1px -1px 2px -1px rgba(0,0,0, 0.70);
+
+        }
+
+        &-inner {
+        position: absolute;
+        display: flex;
+        
+
+        height: 4px;
+        width: 0;
+        border-radius: 4px;
+        
+        background-color: $turquoise;
+
+            // @include breakpoint-up("lg"){            
+            //     animation: anim-progress-js 2s ease forwards;
+            // }
+        }
+    }
+}
+
+.skill-progress-result {
+    height: 86px;
+    width: 86px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint-up("lg"){
+        margin: 10px 0;
+        position: relative;
+        height: min-content;
+        width: min-content;
+    }
+    
+}
+
+
+
+.hide-progress-circle {
+    @include breakpoint-up("lg"){
+        display: none;
+    }
+}
+
+// hide bar
+.hide-progress-bar {
+    @include breakpoint-down("md"){
+        display: none;
+    }
+}
+
+
+// @keyframes anim-progress-js {
+//     0% {
+//         width: 0;
+//     }
+//     100% {
+//         width: 70%;
+//     }
+// }

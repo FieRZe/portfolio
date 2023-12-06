@@ -10,9 +10,6 @@
 
 
     &__content {
-        
-
-
         position: relative;
         
         // margin-left: 25.75em ; // 124px
@@ -166,7 +163,6 @@
     }
 
     &__name > p {
-        font-weight: 300;
         font-size: 1.125rem; // 18px
 
         @include breakpoint-up("md") {
@@ -209,11 +205,9 @@
     }
 
     &__bubble {
-        z-index: 0;
         grid-column-start: main;
         grid-row-start: hero ;
-
-        position: absolute;
+        
         top:-4%;
         right: 0;
         transform: translateX(50%);
@@ -222,10 +216,6 @@
 
         min-width: 128px;
         min-height: 128px;
-
-        border-radius: 300px;
-
-        background-color: rgba($color: $turquoise, $alpha: 0.1);
 
         @include breakpoint-up("md") {
             min-width: 204px;
