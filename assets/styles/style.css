@@ -172,6 +172,12 @@ body {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
 }
+@media (min-width: 64em) {
+  .container--px {
+    padding-right: 4.625rem;
+    padding-left: 4.625rem;
+  }
+}
 .container--py {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;

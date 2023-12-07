@@ -30,6 +30,11 @@ body {
     &--px {
         padding-right: 1.5rem; // 24px; 
         padding-left: 1.5rem; // 24px; 
+
+        @include breakpoint-up("xl"){
+            padding-right: 4.625rem; // 74px; 
+            padding-left: 4.625rem; // 74px; 
+        }
     }
 
     &--py {
