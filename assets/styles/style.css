@@ -646,4 +646,49 @@ body {
   .hide-progress-bar {
     display: none;
   }
+}
+
+.projects-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-slider {
+  max-width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.projects-slider__crop {
+  display: flex;
+}
+
+.project {
+  position: relative;
+  left: -18px;
+  height: 396px;
+  width: 236px;
+  margin-left: 18px;
+  margin-right: 18px;
+}
+.project-01 {
+  background-image: url("/assets/img/projects/project-01.png");
+}
+.project-02 {
+  background-image: url("/assets/img/projects/project-02.png");
+}
+.project-03 {
+  background-image: url("/assets/img/projects/project-03.png");
+}
+.project-04 {
+  background-image: url("/assets/img/projects/project-04.png");
+}
+.project-05 {
+  background-image: url("/assets/img/projects/project-05.png");
+}
+.project-06 {
+  background-image: url("/assets/img/projects/project-06.png");
+}
+.project-07 {
+  background-image: url("/assets/img/projects/project-07.png");
 }/*# sourceMappingURL=style.css.map */
