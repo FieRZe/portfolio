@@ -7,54 +7,63 @@
 
 }
 
-.projects-slider {
-    max-width: 100%;
-
-
+.projects-container-border {
+    height: 520px;
+    width: 100%;
+    border-left: 2px solid $blue-deep;
+    border-right: 2px solid $blue-deep;
+    
     display: flex;
+    align-items: center;
     
     overflow: hidden;
-    // // width: 90%;
-    
-    &__crop {
-        display: flex;
-        // height: 396px;
-
-
-    }
-
 }
 
-
-
-.project
-{
+.projects-slider {
+    display: flex;
     position: relative;
-    left: -18px;
-    height: 396px;
-    width: 236px;
-    margin-left: 18px;
-    margin-right: 18px;
+    left: 50%;
+    transform: translateX(-50%);
 
-    &-01 {
-        background-image: url("/assets/img/projects/project-01.png");
+    .slide-link {
+        margin-left: 18px;
+        margin-right: 18px;
     }
-    &-02 {
-        background-image: url("/assets/img/projects/project-02.png");
+
+    .slide-link:first-child, .slide-link:last-child {
+        margin-left: 0;
     }
-    &-03 {
-        background-image: url("/assets/img/projects/project-03.png");
-    }
-    &-04 {
-        background-image: url("/assets/img/projects/project-04.png");
-    }
-    &-05 {
-        background-image: url("/assets/img/projects/project-05.png");
-    }
-    &-06 {
-        background-image: url("/assets/img/projects/project-06.png");
-    }
-    &-07 {
-        background-image: url("/assets/img/projects/project-07.png");
+
+    .project
+    {
+
+        
+
+
+        height: 396px;
+        width: 236px;
+
+        &-01 {
+            background-image: url("/assets/img/projects/project-01.png");
+        }
+        &-02 {
+            background-image: url("/assets/img/projects/project-02.png");
+        }
+        &-03 {
+            background-image: url("/assets/img/projects/project-03.png");
+        }
+        &-04 {
+            background-image: url("/assets/img/projects/project-04.png");
+        }
+        &-05 {
+            background-image: url("/assets/img/projects/project-05.png");
+        }
+        &-06 {
+            background-image: url("/assets/img/projects/project-06.png");
+        }
+        &-07 {
+            background-image: url("/assets/img/projects/project-07.png");
+        }
     }
 }
+
