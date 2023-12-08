@@ -89,7 +89,7 @@ const onIntersectionFillProgress = (skillsEntries) => {
                 }`;
 
 
-                console.log("skillPercentsHtml = " + skillPercentsHtml);
+                
                 // подготовка css стиля для добавления анимации заполнения линейного бара
                 const skillProgressBarRule = `.progress-bar-inner-${skillClassPrefix} {
                     @media (min-width: 48em) {
@@ -149,9 +149,93 @@ skills.forEach((s) => {observerSkills.observe(s)});
 //#endregion
 
 
+
+
+
+/* Слайдер проектов */
+//#region
+const slider = document.getElementById('projects-slider');
+const overflowContainer = slider.querySelector('.projects-container-border');
+const sliderContainer = slider.getElementsByClassName('projects-slides')[0];
+
+// собрать список слайдов из html
+const defaultSlides = slider.getElementsByClassName('slide-link');
+console.log(defaultSlides[0]);
+
+// на основе html-списка создать массив, который мы будем изменять и показывать частично
+const slides = [];
+for(i = 0; i < defaultSlides.length; i++){
+    slides.push(defaultSlides[i]);
+
+    // очищаем существующий список
+    //defaultSlides[i].remove();
+}
+
+
+let offset = 0;
+
+const sliderNavigation = document.getElementsByClassName('slider-navigation')[0];
+
+const prevButton = sliderNavigation.getElementsByClassName('slider-prev')[0];
+const nextButton = sliderNavigation.getElementsByClassName('slider-next')[0];
+
+
+// Если слайдов мало, то двигать не нужно.
+function moveSlideIfPossible(){
+    const sliderContainerWidth = sliderContainer.offsetWidth;
+    const overflowContainerWidth = overflowContainer.offsetWidth;
+    
+    if(overflowContainerWidth < sliderContainerWidth) {
+        const slideWidth = parseInt(slides[0].offsetWidth) || 0;
+        const computedSlideStyle = getComputedStyle(slides[0]);
+        const slideMarginLeft    = parseInt(computedSlideStyle.marginLeft) || 0;
+        const slideMarginRight   = parseInt(computedSlideStyle.marginRight) || 0;
+        // паддинги и бордеры надо добавить, на случай изменения css
+
+        const fullSlideWidth = slideWidth + slideMarginLeft + slideMarginRight;
+        
+        return fullSlideWidth;
+    } else {
+        return false;
+    } 
+}
+
+
+// Previous Button logic
+function previousSlide() {
+    const getOffset = moveSlideIfPossible();
+    if(getOffset){
+        offset -= getOffset;
+        sliderContainer.style.setProperty('left', `calc(50% + ${offset}px)`);
+    } 
+}
+
+// Next Button logic
+function nextSlide() {
+    const getOffset = moveSlideIfPossible();
+    if(getOffset){
+        offset += getOffset;
+        sliderContainer.style.setProperty('left', `calc(50% + ${offset}px)`);
+    } 
+}
+
+prevButton.addEventListener('click', previousSlide);
+nextButton.addEventListener('click', nextSlide);
+
+
+
+// Next
+
+
+
+//#endregion
+
+
+
+
 const ruleList = document.styleSheets[0].cssRules;
 
-for (let i = 0; i < ruleList.length; i++) {
-  console.log(ruleList[i]);
-}
+// for (let i = 0; i < ruleList.length; i++) {
+//   console.log(ruleList[i]);
+// }
 
