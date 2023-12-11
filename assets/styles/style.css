@@ -670,7 +670,6 @@ body {
   display: flex;
   align-items: center;
   overflow: hidden;
-  transition: height 1s ease;
 }
 @media (min-width: 36em) {
   .projects-container-border {

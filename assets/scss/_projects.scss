@@ -19,7 +19,7 @@
     
     overflow: hidden;
 
-    transition: height 1s ease;
+    
     
     @include breakpoint-up("md") {
         height: 480px;
