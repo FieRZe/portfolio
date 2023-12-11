@@ -89,7 +89,7 @@ const onIntersectionFillProgress = (skillsEntries) => {
                 }`;
 
 
-                console.log("skillPercentsHtml = " + skillPercentsHtml);
+                
                 // подготовка css стиля для добавления анимации заполнения линейного бара
                 const skillProgressBarRule = `.progress-bar-inner-${skillClassPrefix} {
                     @media (min-width: 48em) {
@@ -149,9 +149,217 @@ skills.forEach((s) => {observerSkills.observe(s)});
 //#endregion
 
 
+
+
+
+/* Слайдер проектов */
+//#region
+const slider = document.getElementById('projects-slider');
+const overflowContainer = slider.querySelector('.projects-container-border');
+
+// const sliderNavigation = document.getElementsByClassName('slider-navigation')[0];
+
+
+// 1. Находим элемент .projects-slides с помощью get метода, так как это будет событие по клику.
+const getSliderContainer = function(e) {
+    return e.getElementsByClassName('projects-slides')[0];
+}
+const copySliderContainer = function(e) {
+    return e.cloneNode(true); // true - со всеми дочерними элементами
+}
+
+
+
+
+
+
+
+
+let sliderContainer;
+let clonedSliderContainer;
+
+let slides;
+let clonedSlides;
+
+
+
+// 5. Проводим сортировку в клонированном элементе
+
+// Comparer для сортировки слайдов проектов
+function orderComparer(slideA, slideB){
+    if(slideA.dataset.order < slideB.dataset.order){
+        return -1;
+    } 
+    else if(slideA.dataset.order > slideB.dataset.order){
+        return 1;
+    }
+    else { return 0; }
+}
+
+// объявляем  ф-ию сортировки
+function sortProjectSlides(projectSlidesList, updatedContainer) {
+    let projectsSlidesArray = Array.from(projectSlidesList);
+    let soretedProjects = projectsSlidesArray.sort(orderComparer);
+
+    soretedProjects.forEach((e) => {
+        updatedContainer.appendChild(e);
+    })
+}
+
+// меняем порядок в клонированном элементе
+function changeOrder(direction){
+    if(direction === "left"){
+        for(i = 0; i < clonedSlides.length; i++){
+            clonedSlides[i].dataset.order = [i-1];
+        }
+    
+        // если первый элемент имеет order < 0, переместить его в конец
+        if(clonedSlides[0].dataset.order < 0) {
+            clonedSlides[0].dataset.order = [clonedSlides.length-1];
+        }
+    } 
+    else if (direction === "right")
+    {
+        for(i = 0; i < clonedSlides.length; i++){
+            clonedSlides[i].dataset.order = [i+1];
+        }
+    
+        // Если последний элемент имеет order > длины массива, переместить его в начало.
+        //let lastElementOrderValue = clonedSlides[clonedSlides.length-1].dataset.order;
+        if(clonedSlides[clonedSlides.length-1].dataset.order > clonedSlides.length-1) {
+            clonedSlides[clonedSlides.length-1].dataset.order = [0];
+        }
+    } 
+    else 
+    {
+        console.error("function changeOrder(direction) error");
+    }
+
+    sortProjectSlides(clonedSlides, clonedSliderContainer);
+}
+/**
+ * логика перемещения
+ * 1. Находим элемент .projects-slides с помощью get метода, так как это будет изменяемое событие по клику.
+ * 2. Присваиваем dataset "order" для последуюего изменения порядка элементов
+ * 3. Клонируем элемент .projects-slides в .clone-projects-slides
+ * 4. Двигаем исходный элемент .projects-slides в указанную сторону
+ * 5. Проводим сортировку слайдов в клонируемом элементе
+ * 6. Заменяем слайды на сортированные в клонированном элементе
+ * 7. Заменяем projects-slides клонированным с отсортированным списком Делаем replaceChild(.clone-projects-slides, .projects-slides)
+ *    таким образом мы сначала перемещаем элемент, а затем перерисовываем, сохраняя видимые карточки на своих местах
+ * 8. возврат к шагу №1
+ */
+
+// 4. Двигаем исходный элемент .slider-navigation в указанную сторону
+// const prevButton = sliderNavigation.getElementsByClassName('slider-prev')[0];
+// const nextButton = sliderNavigation.getElementsByClassName('slider-next')[0];
+
+
+const prevButton = document.getElementsByClassName('slider-prev')[0];
+const nextButton = document.getElementsByClassName('slider-next')[0];
+
+
+let offset = 0;
+
+// Если слайдов мало, то двигать не нужно.
+function moveSlideIfPossible(){
+    sliderContainer = getSliderContainer(slider);
+
+    // собрать список слайдов 
+    slides = sliderContainer.querySelectorAll('.slide-link');
+
+    // 2. присваиваем dataset "order" для последуюего изменения порядка элементов
+    for(i = 0; i < slides.length; i++){
+        slides[i].dataset.order = [i];
+    }
+    
+    clonedSliderContainer = copySliderContainer(sliderContainer);
+    clonedSlides = clonedSliderContainer.querySelectorAll('.slide-link');
+
+    const sliderContainerWidth = sliderContainer.offsetWidth;
+    const overflowContainerWidth = overflowContainer.offsetWidth;
+
+    if(overflowContainerWidth < sliderContainerWidth) {
+        const slideWidth = slides[0].offsetWidth;
+        const computedSlideStyle = getComputedStyle(slides[0]);
+        const slideMarginLeft    = parseInt(computedSlideStyle.marginLeft) || 0;
+        const slideMarginRight   = parseInt(computedSlideStyle.marginRight) || 0;
+        // паддинги и бордеры надо добавить, на случай изменения css
+
+        const fullSlideWidth = slideWidth + slideMarginLeft + slideMarginRight;
+        return fullSlideWidth;
+    } else {
+        return false;
+    } 
+}
+
+
+// Move slide button Logic 
+function moveSlide(direction){
+    
+    const getOffset = moveSlideIfPossible();
+    if(direction === "left"){
+        if(getOffset){
+            offset -= getOffset;
+        } 
+    } else if(direction === "right"){
+        if(getOffset){
+            offset += getOffset;
+        } 
+    } else {
+        console.error("function moveSlide(direction) error");
+        return;
+    }
+    changeOrder(direction);
+
+    sliderContainer.style.setProperty('left', `calc(50% + ${offset}px)`);
+
+    setTimeout(() => {
+        overflowContainer.replaceChild(clonedSliderContainer, sliderContainer);
+        offset = 0;
+    }, 1000);
+
+}
+
+function activateSliderNavigation(){
+    prevButton.addEventListener('click', nextSlide);
+    nextButton.addEventListener('click', previousSlide);
+}
+
+function deactivateSliderNavigation(){
+    prevButton.removeEventListener('click', nextSlide);
+    nextButton.removeEventListener('click', previousSlide);
+}
+
+
+const previousSlide = () => { 
+    deactivateSliderNavigation();
+    moveSlide("left"); 
+    setTimeout(()=>{
+ 
+        activateSliderNavigation();
+    },1000);
+}
+const nextSlide = () => { 
+    deactivateSliderNavigation();
+    moveSlide("right") 
+    setTimeout(()=>{
+        
+        activateSliderNavigation();
+    },1000);
+}
+
+
+activateSliderNavigation();
+
+//#endregion
+
+
+
+
 const ruleList = document.styleSheets[0].cssRules;
 
-for (let i = 0; i < ruleList.length; i++) {
-  console.log(ruleList[i]);
-}
+// for (let i = 0; i < ruleList.length; i++) {
+//   console.log(ruleList[i]);
+// }
 
