@@ -8,7 +8,8 @@
 }
 
 .projects-container-border {
-    height: 520px;
+    height: 352px;
+
     width: 100%;
     border-left: 2px solid $blue-deep;
     border-right: 2px solid $blue-deep;
@@ -17,6 +18,12 @@
     align-items: center;
     
     overflow: hidden;
+
+    transition: height 1s ease;
+    
+    @include breakpoint-up("md") {
+        height: 480px;
+    }
 }
 
 .projects-slides {
@@ -28,18 +35,51 @@
     transition: all ease-in-out 1s;
 
     .slide-link {
-        margin-left: 18px;
-        margin-right: 18px;
+        margin-left: 8px;
+        margin-right: 8px;
+        
+        transition: margin 1s ease;
+
+        @include breakpoint-up("xl"){
+            margin-left: 18px;
+            margin-right: 18px;
+        }
+        
+        @include breakpoint-up("xxl"){
+            margin-left: 22px;
+            margin-right: 22px;
+        }
+        
     }
 
     .project
     {
+        width: 158px;
+        height: 266px;
 
+        transition: all 1s linear;
+
+        @include breakpoint-up("md"){
+            width: 216px;
+            height: 366px;
+        }
         
+        @include breakpoint-up("lg"){
+            width: 216px;
+            height: 366px;
+        }
 
+        @include breakpoint-up("xxl") {
+            width: 236px;
+            height: 396px;
+        }
 
-        height: 396px;
-        width: 236px;
+        &:hover{
+            transition: all 0.5s linear;
+            transform: scale(1.05);
+            margin: 0 20px;
+        }
+        
 
         &-01 {
             background-image: url("/assets/img/projects/project-01.png");
@@ -66,16 +106,20 @@
 }
 
 
-.slider-navigation {
-    position: absolute;
+// .slider-navigation {
+//     position: absolute;
 
-    display: flex;
-    justify-content: space-between;
+//     display: flex;
+//     justify-content: space-between;
 
-    margin: 0 10px;
+//     width: 100%;
+//     padding: 0 10px;
 
+//     pointer-events: none;
 
     .slider-prev, .slider-next {
+        position: absolute;
+
         background-color: $turquoise;
         width: 50px;
         height: 50px;
@@ -87,10 +131,13 @@
     }
 
     .slider-prev {
+        left: 10px;
+        
     }
     
     .slider-next {
+        right: 10px;
     }
-}
+// }
 
 

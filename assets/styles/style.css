@@ -108,6 +108,7 @@ body {
 
 h2 {
   font-size: 22px;
+  transition: font-size 1s ease;
 }
 
 @media (min-width: 36em) {
@@ -263,6 +264,7 @@ body {
   align-items: center;
   height: 55px;
   width: 55px;
+  transition: all 1s ease;
 }
 @media (min-width: 36em) {
   .bubble--title {
@@ -661,13 +663,19 @@ body {
 }
 
 .projects-container-border {
-  height: 520px;
+  height: 352px;
   width: 100%;
   border-left: 2px solid #1B5C81;
   border-right: 2px solid #1B5C81;
   display: flex;
   align-items: center;
   overflow: hidden;
+  transition: height 1s ease;
+}
+@media (min-width: 36em) {
+  .projects-container-border {
+    height: 480px;
+  }
 }
 
 .projects-slides {
@@ -678,12 +686,49 @@ body {
   transition: all ease-in-out 1s;
 }
 .projects-slides .slide-link {
-  margin-left: 18px;
-  margin-right: 18px;
+  margin-left: 8px;
+  margin-right: 8px;
+  transition: margin 1s ease;
+}
+@media (min-width: 64em) {
+  .projects-slides .slide-link {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+}
+@media (min-width: 80em) {
+  .projects-slides .slide-link {
+    margin-left: 22px;
+    margin-right: 22px;
+  }
 }
 .projects-slides .project {
-  height: 396px;
-  width: 236px;
+  width: 158px;
+  height: 266px;
+  transition: all 1s linear;
+}
+@media (min-width: 36em) {
+  .projects-slides .project {
+    width: 216px;
+    height: 366px;
+  }
+}
+@media (min-width: 48em) {
+  .projects-slides .project {
+    width: 216px;
+    height: 366px;
+  }
+}
+@media (min-width: 80em) {
+  .projects-slides .project {
+    width: 236px;
+    height: 396px;
+  }
+}
+.projects-slides .project:hover {
+  transition: all 0.5s linear;
+  transform: scale(1.05);
+  margin: 0 20px;
 }
 .projects-slides .project-01 {
   background-image: url("/assets/img/projects/project-01.png");
@@ -707,13 +752,8 @@ body {
   background-image: url("/assets/img/projects/project-07.png");
 }
 
-.slider-navigation {
+.slider-prev, .slider-next {
   position: absolute;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 10px;
-}
-.slider-navigation .slider-prev, .slider-navigation .slider-next {
   background-color: #119199;
   width: 50px;
   height: 50px;
@@ -721,4 +761,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.slider-prev {
+  left: 10px;
+}
+
+.slider-next {
+  right: 10px;
 }/*# sourceMappingURL=style.css.map */

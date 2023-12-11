@@ -156,7 +156,8 @@ skills.forEach((s) => {observerSkills.observe(s)});
 //#region
 const slider = document.getElementById('projects-slider');
 const overflowContainer = slider.querySelector('.projects-container-border');
-const sliderNavigation = document.getElementsByClassName('slider-navigation')[0];
+
+// const sliderNavigation = document.getElementsByClassName('slider-navigation')[0];
 
 
 // 1. Находим элемент .projects-slides с помощью get метода, так как это будет событие по клику.
@@ -250,8 +251,12 @@ function changeOrder(direction){
  */
 
 // 4. Двигаем исходный элемент .slider-navigation в указанную сторону
-const prevButton = sliderNavigation.getElementsByClassName('slider-prev')[0];
-const nextButton = sliderNavigation.getElementsByClassName('slider-next')[0];
+// const prevButton = sliderNavigation.getElementsByClassName('slider-prev')[0];
+// const nextButton = sliderNavigation.getElementsByClassName('slider-next')[0];
+
+
+const prevButton = document.getElementsByClassName('slider-prev')[0];
+const nextButton = document.getElementsByClassName('slider-next')[0];
 
 
 let offset = 0;
@@ -291,7 +296,7 @@ function moveSlideIfPossible(){
 
 // Move slide button Logic 
 function moveSlide(direction){
-    console.log("Enter Move slide");
+    
     const getOffset = moveSlideIfPossible();
     if(direction === "left"){
         if(getOffset){

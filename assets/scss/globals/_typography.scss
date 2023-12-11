@@ -11,6 +11,8 @@ body {
 
 h2 {
     font-size: 22px;
+
+    transition: font-size 1s ease;
     
 
     @include mixin.breakpoint-up(md){
