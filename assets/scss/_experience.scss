@@ -1,0 +1,43 @@
+.experience-grid {
+    margin-left: 24px;
+    margin-right: 24px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.job-period {
+    margin-right: 16px;
+
+
+    &__total {
+        margin-bottom: 2px;
+        
+        @include breakpoint-up("xxl"){
+            font-size: 18px;
+        }
+    }
+    &__since {
+    }
+}
+
+.job {
+
+    margin-bottom: 50px;
+
+    &__company-name {
+        margin-bottom: 14px;
+    }
+    &__position {
+        margin-bottom: 14px;
+
+        @include breakpoint-up("xxl"){
+            font-size: 18px;
+        }
+    }
+    &__charge {
+        & li {
+            list-style-type: disc;
+            margin-left: 28px;
+        }
+    }
+}

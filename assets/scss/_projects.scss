@@ -7,6 +7,11 @@
 
 }
 
+.skill-progress-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .projects-container-border {
     height: 352px;
 

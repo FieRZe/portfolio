@@ -28,6 +28,22 @@ p {
     font-weight: 300;
 }
 
+.text {
+    font-size: 12px;
+
+    @include mixin.breakpoint-up("md"){
+        font-size: 16px;
+    }
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
 /* Links */
 a, a:link, a:visited  {
     color: variables.$white;
@@ -37,3 +53,4 @@ a, a:link, a:visited  {
 a:hover  {
     text-decoration: none;
 }
+
