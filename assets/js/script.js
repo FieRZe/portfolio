@@ -357,6 +357,112 @@ activateSliderNavigation();
 
 
 
+/* Сколько отработано дней на текущей работе */
+//#region 
+
+/**
+ * 1. Парсим дату начала 
+ * 2. Получаем сегодняшнюю дату
+ * 3. Высчитываем разницу лет
+ * 4. Высчитываем разницу месяцев
+ * 5. определяем окончание год, года, лет в том числе 0
+ * 6. определяем окончание месяц, месяца, месяцев и 0
+ * 7. Заменяем текст в DOM дереве
+ */ 
+
+const months = [
+    "Январь",
+    "Февраль",
+    "Март",
+    "Апрель",
+    "Май",
+    "Июнь",
+    "Июль",
+    "Август",
+    "Сентябрь",
+    "Октябрь",
+    "Ноябрь",
+    "Декабрь"
+];
+
+
+const currentJob = document.getElementById("current-job");
+const totalJobPeriodField = currentJob.querySelector(".job-period__total");
+// Получаем дату начала работы
+const startJobDate = currentJob.querySelector(".job-period__since");
+
+// 1. Парсим дату начала работы
+const startJobDateYear = Number(startJobDate.innerHTML.split(' ')[1]);
+const startJobDateMonthString = startJobDate.innerHTML.split(' ')[0];
+const startJobDateMonthIndex = months.indexOf(startJobDateMonthString);
+
+// 2. Получаем сегодняшнюю дату:
+const today = new Date;
+const todayYear = today.getFullYear();
+const todayMonth = today.getMonth();
+
+// 3. Высчитываем разницу лет
+const totalYears = todayYear - startJobDateYear;
+// 4. Высчитываем разницу месяцев
+const totalMonths = todayMonth - startJobDateMonthIndex;
+
+// * 5. определяем окончание год, года, лет в том числе 0
+function getYearSuffix(years) {
+    if(years >= 5){
+        return "лет";
+    }
+    else if (years < 5) {
+        return "года";
+    }
+    else if (years === 1) {
+        return "год";
+    }
+    else if (years === 0){
+        return "";
+    }
+    else {
+        console.error("Неверный год getYearSuffix(year)")
+        return "";
+    }
+}
+const yearSuffix = getYearSuffix(totalYears);
+
+// * 6. определяем окончание месяц, месяца, месяцев и 0
+function getMonthSuffix(months) {
+    if(months >= 5){
+        return "месяцев";
+    } 
+    else if(months < 5) {
+        return "месяца";
+    }
+    else if(months === 1){
+        return "месяц";
+    }
+    else if(months === 0) {
+        return "";
+    } 
+    else {
+        console.error("Неверный месяц getMonthSuffix(months)")
+        return "";
+    }
+}
+const monthSuffix = getMonthSuffix(totalMonths);
+
+// объединяем строку
+const totalJobPeriod = `${totalYears} ${yearSuffix} ${totalMonths} ${monthSuffix}`;
+console.log(totalJobPeriod);
+
+// * 7. Заменяем текст в DOM дереве
+totalJobPeriodField.innerHTML = totalJobPeriod;
+
+
+
+//#endregion
+
+
+
+
+
 const ruleList = document.styleSheets[0].cssRules;
 
 // for (let i = 0; i < ruleList.length; i++) {
