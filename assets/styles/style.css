@@ -799,14 +799,42 @@ body {
 }
 
 .experience-grid {
-  margin-left: 24px;
-  margin-right: 24px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-bottom: 50px;
+}
+@media (min-width: 36em) {
+  .experience-grid {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+.experience-flex {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 48em) {
+  .experience-flex {
+    flex-direction: row;
+  }
 }
 
 .job-period {
-  margin-right: 16px;
+  display: flex;
+  flex: 2;
+  order: 2;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: 50px;
+}
+@media (min-width: 48em) {
+  .job-period {
+    order: 1;
+    align-items: start;
+    margin-bottom: 0;
+    margin-right: 16px;
+  }
 }
 .job-period__total {
   margin-bottom: 2px;
@@ -817,7 +845,18 @@ body {
   }
 }
 .job {
-  margin-bottom: 50px;
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+}
+@media (min-width: 48em) {
+  .job {
+    order: 2;
+    align-items: start;
+    margin-bottom: 50px;
+  }
 }
 .job__company-name {
   margin-bottom: 14px;
