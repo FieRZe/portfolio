@@ -2,56 +2,6 @@
    margin-bottom: 50px;
 }
 
-.title {
-    position: relative;
-    display: flex;
-
-    height: 55px;
-
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom: 36px;
-
-    @include breakpoint-up("md"){
-        height: 105px;
-    }
-
-    & > .bubble--title {
-        position: relative;
-        margin: 0 10%;
-    }
-
-    &__left, &__right {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        height: 10px;
-        width: 100%;
-    }
-        
-    &__circle{
-        display: block;
-        content: "";
-        height: 10px;
-        width: 10px;
-
-        border-radius: 10px;
-
-        background-color: $turquoise;
-
-
-    }
-
-    &__line {
-        height: 2px;
-        width: 100%;
-        background-color: $blue-deep;
-    }
-}
-
-
 .skill-flex-container {
     display: flex;
     flex-direction: column;
@@ -91,7 +41,7 @@
 }
 
 .skill-note {
-    margin: 20px 0 42px;
+    margin: 20px 0 42px 16px;
 }
 
 .progress {

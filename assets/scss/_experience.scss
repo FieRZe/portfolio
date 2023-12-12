@@ -1,0 +1,84 @@
+.experience-grid {
+    margin-left: 6px;
+    margin-right: 6px;
+
+    margin-bottom: 50px;
+
+    @include breakpoint-up("md"){
+        margin-left: 24px;
+        margin-right: 24px;
+
+    }
+}
+
+.experience-flex {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint-up("lg"){
+        flex-direction: row;
+    }
+}
+
+.job-period {
+    display: flex;
+    flex: 2;
+    order: 2;
+    flex-direction: column;
+    
+    align-items: end;
+
+    margin-bottom: 50px;
+    
+    @include breakpoint-up("lg"){
+        order: 1;
+        align-items: start;
+        margin-bottom: 0;
+        margin-right: 16px;
+    }
+
+
+    &__total {
+        margin-bottom: 2px;
+        
+        @include breakpoint-up("xxl"){
+            font-size: 18px;
+        }
+    }
+    &__since {
+    }
+}
+
+.job {  
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12px;
+
+    
+    @include breakpoint-up("lg"){
+        order: 2;
+        align-items: start;
+        margin-bottom: 50px;
+    }
+
+
+    &__company-name {
+        margin-bottom: 14px;
+        
+    }
+    &__position {
+        margin-bottom: 14px;
+
+        @include breakpoint-up("xxl"){
+            font-size: 18px;
+        }
+    }
+    &__charge {
+        & li {
+            list-style-type: disc;
+            margin-left: 28px;
+        }
+    }
+}

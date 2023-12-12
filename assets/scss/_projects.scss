@@ -1,3 +1,8 @@
+.projects {
+    margin-bottom: 50px;
+}
+
+
 .projects-flex-container {
     display: flex;
     flex-direction: column;
@@ -5,6 +10,11 @@
 
     
 
+}
+
+.skill-progress-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .projects-container-border {

@@ -125,6 +125,23 @@ p {
   font-weight: 300;
 }
 
+.text {
+  font-size: 12px;
+}
+
+@media (min-width: 36em) {
+  .text {
+    font-size: 16px;
+  }
+}
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
 /* Links */
 a, a:link, a:visited {
   color: #ffffff;
@@ -153,7 +170,7 @@ body {
 
 .main-wrapper {
   flex-grow: 1;
-  height: 300vh;
+  height: 400vh;
   background-color: #342C3C;
   overflow: hidden;
 }
@@ -172,11 +189,18 @@ body {
 .container--px {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
+  transition: padding 1s ease;
 }
 @media (min-width: 64em) {
   .container--px {
-    padding-right: 4.625rem;
-    padding-left: 4.625rem;
+    padding-right: 5.625rem;
+    padding-left: 5.625rem;
+  }
+}
+@media (min-width: 80em) {
+  .container--px {
+    padding-right: 7.125rem;
+    padding-left: 7.125rem;
   }
 }
 .container--py {
@@ -225,11 +249,6 @@ body {
   grid-row-start: photo;
 }
 
-.skill-progress-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 @media (max-width: 63.99875em) {
   .hide-for-mobile {
     display: none;
@@ -271,6 +290,44 @@ body {
     height: 105px;
     width: 105px;
   }
+}
+
+.title {
+  position: relative;
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 36px;
+}
+@media (min-width: 36em) {
+  .title {
+    height: 105px;
+  }
+}
+.title > .bubble--title {
+  position: relative;
+  margin: 0 10%;
+}
+.title__left, .title__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+  width: 100%;
+}
+.title__circle {
+  display: block;
+  content: "";
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background-color: #119199;
+}
+.title__line {
+  height: 2px;
+  width: 100%;
+  background-color: #1B5C81;
 }
 
 .header {
@@ -478,44 +535,6 @@ body {
   margin-bottom: 50px;
 }
 
-.title {
-  position: relative;
-  display: flex;
-  height: 55px;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 36px;
-}
-@media (min-width: 36em) {
-  .title {
-    height: 105px;
-  }
-}
-.title > .bubble--title {
-  position: relative;
-  margin: 0 10%;
-}
-.title__left, .title__right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10px;
-  width: 100%;
-}
-.title__circle {
-  display: block;
-  content: "";
-  height: 10px;
-  width: 10px;
-  border-radius: 10px;
-  background-color: #119199;
-}
-.title__line {
-  height: 2px;
-  width: 100%;
-  background-color: #1B5C81;
-}
-
 .skill-flex-container {
   display: flex;
   flex-direction: column;
@@ -556,7 +575,7 @@ body {
 }
 
 .skill-note {
-  margin: 20px 0 42px;
+  margin: 20px 0 42px 16px;
 }
 
 .progress-helper-container {
@@ -656,10 +675,19 @@ body {
   }
 }
 
+.projects {
+  margin-bottom: 50px;
+}
+
 .projects-flex-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.skill-progress-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .projects-container-border {
@@ -768,4 +796,80 @@ body {
 
 .slider-next {
   right: 10px;
+}
+
+.experience-grid {
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-bottom: 50px;
+}
+@media (min-width: 36em) {
+  .experience-grid {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+.experience-flex {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 48em) {
+  .experience-flex {
+    flex-direction: row;
+  }
+}
+
+.job-period {
+  display: flex;
+  flex: 2;
+  order: 2;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: 50px;
+}
+@media (min-width: 48em) {
+  .job-period {
+    order: 1;
+    align-items: start;
+    margin-bottom: 0;
+    margin-right: 16px;
+  }
+}
+.job-period__total {
+  margin-bottom: 2px;
+}
+@media (min-width: 80em) {
+  .job-period__total {
+    font-size: 18px;
+  }
+}
+.job {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+}
+@media (min-width: 48em) {
+  .job {
+    order: 2;
+    align-items: start;
+    margin-bottom: 50px;
+  }
+}
+.job__company-name {
+  margin-bottom: 14px;
+}
+.job__position {
+  margin-bottom: 14px;
+}
+@media (min-width: 80em) {
+  .job__position {
+    font-size: 18px;
+  }
+}
+.job__charge li {
+  list-style-type: disc;
+  margin-left: 28px;
 }/*# sourceMappingURL=style.css.map */

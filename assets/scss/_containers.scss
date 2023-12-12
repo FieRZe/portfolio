@@ -6,7 +6,7 @@ body {
 
 .main-wrapper {
     flex-grow: 1;
-    height: 300vh; // удалить, после вёрстки
+    height: 400vh; // удалить, после вёрстки
     background-color: $purple-dark;
 
     overflow: hidden;
@@ -31,9 +31,14 @@ body {
         padding-right: 1.5rem; // 24px; 
         padding-left: 1.5rem; // 24px; 
 
+        transition: padding 1s ease;
         @include breakpoint-up("xl"){
-            padding-right: 4.625rem; // 74px; 
-            padding-left: 4.625rem; // 74px; 
+            padding-right: 5.625rem; // 90px; 
+            padding-left: 5.625rem; // 90px; 
+        }
+        @include breakpoint-up("xxl"){
+            padding-right: 7.125rem; // 114px; 
+            padding-left: 7.125rem; // 114px; 
         }
     }
 
@@ -87,11 +92,6 @@ body {
     &--photo-row {
         grid-row-start: photo;
     }
-}
-
-.skill-progress-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 }
 
 // hide desktop menu
