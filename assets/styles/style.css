@@ -170,7 +170,7 @@ body {
 
 .main-wrapper {
   flex-grow: 1;
-  height: 400vh;
+  height: 600vh;
   background-color: #342C3C;
   overflow: hidden;
 }
@@ -872,4 +872,50 @@ body {
 .job__charge li {
   list-style-type: disc;
   margin-left: 28px;
+}
+
+.education {
+  margin-bottom: 50px;
+}
+.education .bubble {
+  margin-left: 18%;
+  margin-right: 18%;
+}
+.education-wrapper {
+  margin-left: 6px;
+  margin-right: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 36em) {
+  .education-wrapper {
+    margin-left: 24px;
+    margin-right: 24px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.education-years, .education-type {
+  margin-bottom: 10px;
+}
+@media (min-width: 36em) {
+  .education-years, .education-type {
+    margin-bottom: 0;
+  }
+}
+.education-type {
+  flex: 2;
+  padding: 0 10px;
+}
+.education-years {
+  flex: 2;
+}
+.education-container {
+  flex: 8;
+  display: flex;
+  flex-direction: column;
+}
+.education-specialization {
+  margin-bottom: 10px;
 }/*# sourceMappingURL=style.css.map */

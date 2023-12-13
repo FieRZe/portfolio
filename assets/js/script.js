@@ -450,7 +450,6 @@ const monthSuffix = getMonthSuffix(totalMonths);
 
 // объединяем строку
 const totalJobPeriod = `${totalYears} ${yearSuffix} ${totalMonths} ${monthSuffix}`;
-console.log(totalJobPeriod);
 
 // * 7. Заменяем текст в DOM дереве
 totalJobPeriodField.innerHTML = totalJobPeriod;
