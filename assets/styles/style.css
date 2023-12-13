@@ -143,13 +143,12 @@ p {
 }
 
 /* Links */
-a, a:link, a:visited {
-  color: #ffffff;
+a:hover {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: none;
+.links {
+  color: #71CBCD;
 }
 
 .show-on-scroll {
@@ -218,6 +217,16 @@ body {
 }
 .container--pl {
   padding-left: 1.5rem;
+}
+.container--my {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+@media (min-width: 36em) {
+  .container--my {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
 }
 
 .grid {
@@ -799,15 +808,7 @@ body {
 }
 
 .experience-grid {
-  margin-left: 6px;
-  margin-right: 6px;
   margin-bottom: 50px;
-}
-@media (min-width: 36em) {
-  .experience-grid {
-    margin-left: 24px;
-    margin-right: 24px;
-  }
 }
 
 .experience-flex {
@@ -878,20 +879,22 @@ body {
   margin-bottom: 50px;
 }
 .education .bubble {
-  margin-left: 18%;
-  margin-right: 18%;
+  margin-left: 22%;
+  margin-right: 22%;
+}
+@media (min-width: 36em) {
+  .education .bubble {
+    margin-left: 18%;
+    margin-right: 18%;
+  }
 }
 .education-wrapper {
-  margin-left: 6px;
-  margin-right: 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media (min-width: 36em) {
   .education-wrapper {
-    margin-left: 24px;
-    margin-right: 24px;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -918,4 +921,14 @@ body {
 }
 .education-specialization {
   margin-bottom: 10px;
+}
+.biography .bubble {
+  margin-left: 19%;
+  margin-right: 19%;
+}
+@media (min-width: 36em) {
+  .biography .bubble {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }/*# sourceMappingURL=style.css.map */

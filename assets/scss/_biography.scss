@@ -1,0 +1,16 @@
+.biography {
+
+    & .bubble {
+        
+        margin-left:  19%;
+        margin-right: 19%;
+
+        @include breakpoint-up("md") {
+            margin-left:  15%;
+            margin-right: 15%;
+        }
+    }
+
+}
+
+    
