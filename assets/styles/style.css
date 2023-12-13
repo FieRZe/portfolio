@@ -218,6 +218,16 @@ body {
 .container--pl {
   padding-left: 1.5rem;
 }
+.container--my {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+@media (min-width: 36em) {
+  .container--my {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
 
 .grid {
   display: grid;
@@ -798,15 +808,7 @@ body {
 }
 
 .experience-grid {
-  margin-left: 6px;
-  margin-right: 6px;
   margin-bottom: 50px;
-}
-@media (min-width: 36em) {
-  .experience-grid {
-    margin-left: 24px;
-    margin-right: 24px;
-  }
 }
 
 .experience-flex {
@@ -887,16 +889,12 @@ body {
   }
 }
 .education-wrapper {
-  margin-left: 6px;
-  margin-right: 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media (min-width: 36em) {
   .education-wrapper {
-    margin-left: 24px;
-    margin-right: 24px;
     flex-direction: row;
     justify-content: space-between;
   }
