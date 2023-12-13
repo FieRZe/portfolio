@@ -143,13 +143,12 @@ p {
 }
 
 /* Links */
-a, a:link, a:visited {
-  color: #ffffff;
+a:hover {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: none;
+.links {
+  color: #71CBCD;
 }
 
 .show-on-scroll {
@@ -878,8 +877,14 @@ body {
   margin-bottom: 50px;
 }
 .education .bubble {
-  margin-left: 18%;
-  margin-right: 18%;
+  margin-left: 22%;
+  margin-right: 22%;
+}
+@media (min-width: 36em) {
+  .education .bubble {
+    margin-left: 18%;
+    margin-right: 18%;
+  }
 }
 .education-wrapper {
   margin-left: 6px;
@@ -918,4 +923,14 @@ body {
 }
 .education-specialization {
   margin-bottom: 10px;
+}
+.biography .bubble {
+  margin-left: 19%;
+  margin-right: 19%;
+}
+@media (min-width: 36em) {
+  .biography .bubble {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }/*# sourceMappingURL=style.css.map */

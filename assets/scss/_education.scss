@@ -2,8 +2,13 @@
     margin-bottom: 50px;
 
     & .bubble {
-        margin-left: 18%;
-        margin-right: 18%;
+        margin-left:  22%;
+        margin-right: 22%;
+
+        @include breakpoint-up("md") {
+            margin-left:  18%;
+            margin-right: 18%;
+        }
     }
     
     &-wrapper {
@@ -25,7 +30,6 @@
 
     &-years, &-type {
         margin-bottom: 10px;
-        
         @include breakpoint-up("md"){
             margin-bottom: 0;
         }
