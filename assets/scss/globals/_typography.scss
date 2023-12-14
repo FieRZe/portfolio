@@ -45,15 +45,14 @@ p {
 }
 
 /* Links */
-// a, a:link, a:visited  {
-//     color: variables.$white;
-//     text-decoration: none;
-// }
-
-a:hover  {
+a, a:link, a:visited  {
+    color: variables.$white;
     text-decoration: none;
 }
 
-.links {
+a:hover  {
     color: variables.$turquoise-light;
+    text-decoration: none;
 }
+
+

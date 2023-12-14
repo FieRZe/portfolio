@@ -11,6 +11,12 @@
         }
     }
 
+    & > a, a:link, a:visited {
+        color: $turquoise-light;
+        text-decoration: underline;
+    }
 }
+
+
 
     
