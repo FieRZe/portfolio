@@ -1,4 +1,5 @@
 .biography {
+    margin-bottom: 50px;
 
     & .bubble {
         
@@ -11,6 +12,12 @@
         }
     }
 
+    & > a, a:link, a:visited {
+        color: $turquoise-light;
+        text-decoration: underline;
+    }
 }
+
+
 
     

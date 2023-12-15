@@ -90,6 +90,7 @@
         
         height: 50px;
 
+        transition: all 1s ease;
         @include breakpoint-up("md"){
             height: 88px;
             width: 4.375rem;  // 70px
